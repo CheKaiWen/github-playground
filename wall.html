@@ -26,7 +26,8 @@
 <section class="wall-page">
   <div class="container-wide">
     <div class="wall-hero">
-      <div>
+      <div class="wall-qr"><div id="wall-qr"></div><strong>Scan to join</strong><span id="wall-qr-url" class="wall-qr-url"></span></div>
+      <div class="wall-title">
         <h1>Community Wall</h1>
         <p class="lead" style="margin:0">Everyone below added themselves with Git. Join in at <strong class="tpl">{{SITE_URL}}learn.html</strong></p>
       </div>
@@ -62,5 +63,7 @@
 <script src="js/icons.js?v=dev"></script>
 <script src="js/diagrams.js?v=dev"></script>
 <script src="js/app.js?v=dev"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/wall-qr.js?v=dev"></script>
 </body>
 </html>
