@@ -28,6 +28,8 @@ jobs:
           mkdir _site
           cp -r index.html learn.html resources.html css js data participants materials _site/
           touch _site/.nojekyll
+          # cache-bust css/js so a stale browser cache can never mix old assets with new pages
+          sed -i "s/?v=dev/?v=${GITHUB_SHA::7}/g" _site/*.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
