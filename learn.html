@@ -27,6 +27,9 @@
   <div class="card progress-box">
     <strong id="progress-label">0 of 6 missions done</strong>
     <div class="bar" role="progressbar" aria-labelledby="progress-label" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><i id="progress-fill"></i></div>
+    <div style="margin-top:14px"><strong>How do you want to do it?</strong>
+      <div class="method-switch" role="group" aria-label="Method"><button type="button" data-method="terminal" aria-pressed="true">Terminal</button><button type="button" data-method="desktop" aria-pressed="false">GitHub Desktop</button></div>
+      <p class="hint" style="margin:6px 0 0">Terminal is what this workshop teaches. Choose GitHub Desktop if you prefer buttons: its steps open inside each mission.</p></div>
     <label for="username-input" style="font-weight:800;display:block;margin-top:14px">Your GitHub username</label>
     <div class="user-box"><input id="username-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. alex-123" maxlength="39"></div>
     <p class="hint" style="margin:6px 0 0">Fills your name into the commands. Saved only in this browser.</p>

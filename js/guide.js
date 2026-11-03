@@ -22,6 +22,16 @@
     GP.setUsername(input.value);
   });
 
+  // ───────── Method switch: Terminal / GitHub Desktop ─────────
+  function setMethod(m) {
+    GP.store.set('gp.method', m);
+    document.body.dataset.method = m;
+    document.querySelectorAll('[data-method]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.method === m)));
+    document.querySelectorAll('details.desktop').forEach((d) => { d.open = m === 'desktop'; });
+  }
+  document.addEventListener('click', (e) => { const b = e.target.closest('[data-method]'); if (b) setMethod(b.dataset.method); });
+  setMethod(GP.store.get('gp.method') === 'desktop' ? 'desktop' : 'terminal');
+
   // ───────── Stepper ─────────
   real.forEach((id, i) => {
     const m = document.getElementById(id);

@@ -27,7 +27,7 @@
   <span class="eyebrow"><i class="ic" data-icon="book"></i> Resources</span>
   <h1 style="font-size:clamp(2rem,5vw,3rem)">Cheat sheet, pictures &amp; extras</h1>
   <p class="lead">Everything you need after (or during) the missions.</p>
-  <div class="res-nav"><a class="btn" href="#cheatsheet"><i class="ic" data-icon="file"></i> Cheat sheet</a><a class="btn" href="#visuals"><i class="ic" data-icon="image"></i> Visual guides</a><a class="btn" href="#troubleshooting"><i class="ic" data-icon="life-buoy"></i> Troubleshooting</a><a class="btn" href="#bonus"><i class="ic" data-icon="target"></i> Bonus missions</a></div>
+  <div class="res-nav"><a class="btn" href="#cheatsheet"><i class="ic" data-icon="file"></i> Cheat sheet</a><a class="btn" href="#visuals"><i class="ic" data-icon="image"></i> Visual guides</a><a class="btn" href="#troubleshooting"><i class="ic" data-icon="life-buoy"></i> Troubleshooting</a><a class="btn" href="#bonus"><i class="ic" data-icon="target"></i> Bonus missions</a><a class="btn" href="#desktop"><i class="ic" data-icon="monitor"></i> GitHub Desktop</a></div>
   <div class="os-picker" style="margin-top:18px"><strong>My computer:</strong><div class="os-switch" role="group" aria-label="Operating system"><button type="button" data-set-os="mac">macOS</button><button type="button" data-set-os="win">Windows</button><button type="button" data-set-os="linux">Linux</button></div></div>
 </div></section>
 
@@ -45,6 +45,16 @@
   <h3>4 · Branches and merging</h3><div class="diagram" data-diagram="branches"></div>
   <h3>5 · Fork → clone → commit → push → pull request</h3><div class="diagram" data-diagram="flow"></div>
 </div></section>
+<section class="section" id="desktop"><div class="container narrow"><div class="section-head"><h2><i class="ic" data-icon="monitor"></i> GitHub Desktop (no terminal)</h2><p class="muted">Prefer buttons? GitHub Desktop (macOS and Windows) does the same Git steps. The full walkthrough is inside each mission on the Learn page: switch <strong>How do you want to do it?</strong> to <strong>GitHub Desktop</strong> and the steps open automatically.</p></div>
+<div class="table-wrap"><table class="compare"><tr><th>In GitHub Desktop</th><th>Terminal command</th></tr>
+<tr><td>File, Clone repository</td><td><code class="inline">git clone</code></td></tr>
+<tr><td>Current Branch, New Branch</td><td><code class="inline">git switch -c</code></td></tr>
+<tr><td>Ticked file in the Changes tab</td><td><code class="inline">git add</code></td></tr>
+<tr><td>Commit to &lt;branch&gt;</td><td><code class="inline">git commit -m</code></td></tr>
+<tr><td>History tab</td><td><code class="inline">git log</code></td></tr>
+<tr><td>Publish branch / Push origin</td><td><code class="inline">git push -u origin</code> / <code class="inline">git push</code></td></tr>
+<tr><td>Create Pull Request</td><td>opens the PR page on github.com</td></tr></table></div>
+<p style="margin-top:16px"><a class="btn btn-primary" href="learn.html">Open the Learn page</a></p></div></section>
 <section class="section" id="troubleshooting"><div class="container narrow"><div class="section-head"><h2><i class="ic" data-icon="life-buoy"></i> Troubleshooting</h2><p class="muted">Most errors are typos or being in the wrong folder. Read the message; it usually tells you what’s wrong.</p></div>
 <details><summary><code class="inline">git: command not found</code> / “not recognized”</summary><p>Git isn’t installed or the terminal needs restarting. Install Git (Mission 0), then <strong>close and reopen</strong> the terminal.</p></details>
 <details><summary>“Author identity unknown”</summary><p>Set your name and email: <code class="inline">git config --global user.name "Name"</code> and <code class="inline">git config --global user.email "you@example.com"</code>, then commit again.</p></details>
