@@ -13,7 +13,7 @@
 <header class="site-header">
   <div class="container">
     <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&lt;/&gt;</span> GitHub Playground</a>
-    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><i class="ic" data-icon="menu"></i> Menu</button>
     <nav id="site-nav" class="nav" aria-label="Main">
       <a data-nav="home" href="index.html">Home</a>
       <a data-nav="learn" href="learn.html">Learn</a>
@@ -24,28 +24,28 @@
 <main id="main">
 <section class="section">
 <div class="container">
-  <span class="eyebrow">📚 Resources</span>
+  <span class="eyebrow"><i class="ic" data-icon="book"></i> Resources</span>
   <h1 style="font-size:clamp(2rem,5vw,3rem)">Cheat sheet, pictures &amp; extras</h1>
   <p class="lead">Everything you need after (or during) the missions.</p>
-  <div class="res-nav"><a class="btn" href="#cheatsheet">📝 Cheat sheet</a><a class="btn" href="#visuals">🖼 Visual guides</a><a class="btn" href="#troubleshooting">🛟 Troubleshooting</a><a class="btn" href="#bonus">🎯 Bonus missions</a></div>
-  <div class="os-picker" style="margin-top:18px"><strong>My computer:</strong><div class="os-switch" role="group" aria-label="Operating system"><button type="button" data-set-os="mac">🍎 macOS</button><button type="button" data-set-os="win">🪟 Windows</button><button type="button" data-set-os="linux">🐧 Linux</button></div></div>
+  <div class="res-nav"><a class="btn" href="#cheatsheet"><i class="ic" data-icon="file"></i> Cheat sheet</a><a class="btn" href="#visuals"><i class="ic" data-icon="image"></i> Visual guides</a><a class="btn" href="#troubleshooting"><i class="ic" data-icon="life-buoy"></i> Troubleshooting</a><a class="btn" href="#bonus"><i class="ic" data-icon="target"></i> Bonus missions</a></div>
+  <div class="os-picker" style="margin-top:18px"><strong>My computer:</strong><div class="os-switch" role="group" aria-label="Operating system"><button type="button" data-set-os="mac">macOS</button><button type="button" data-set-os="win">Windows</button><button type="button" data-set-os="linux">Linux</button></div></div>
 </div></section>
 
 <section class="section" id="cheatsheet"><div class="container">
-  <div class="section-head"><h2>📝 Git cheat sheet</h2><p class="muted">The commands from today, one sentence each. <a href="materials/git-cheatsheet.html" target="_blank" rel="noopener">Open the printable one-page version</a> (use your browser’s Print → Save as PDF).</p></div>
+  <div class="section-head"><h2><i class="ic" data-icon="file"></i> Git cheat sheet</h2><p class="muted">The commands from today, one sentence each. <a href="materials/git-cheatsheet.html" target="_blank" rel="noopener">Open the printable one-page version</a> (use your browser’s Print → Save as PDF).</p></div>
   <div class="cheat-grid"><div><h4>Setup</h4><div class="cheat-row"><code>git --version</code>Check that Git is installed.</div><div class="cheat-row"><code>git config --global user.name "Your Name"</code>Set the name shown on your commits.</div><div class="cheat-row"><code>git config --global user.email "you@example.com"</code>Set the email shown on your commits.</div></div><div><h4>Get a project</h4><div class="cheat-row"><code>git clone &lt;repo-url&gt;</code>Download a repository to your computer.</div><div class="cheat-row"><code>git remote -v</code>Show which online repositories this one is linked to.</div></div><div><h4>Look around</h4><div class="cheat-row"><code>git status</code>Show what changed and what is staged.</div><div class="cheat-row"><code>git log --oneline</code>Show the history, one short line per commit.</div></div><div><h4>Save your work</h4><div class="cheat-row"><code>git switch -c &lt;branch-name&gt;</code>Create a new branch and switch to it.</div><div class="cheat-row"><code>git add &lt;file&gt;</code>Stage a file so it goes into the next commit.</div><div class="cheat-row"><code>git commit -m "message"</code>Save a snapshot of the staged files with a note.</div></div><div><h4>Share</h4><div class="cheat-row"><code>git push -u origin &lt;branch-name&gt;</code>Upload your branch to GitHub and remember the link.</div><div class="cheat-row"><code>git pull</code>Download and merge new changes from GitHub.</div></div></div>
   <div class="diagram" data-diagram="areas" style="margin-top:24px"></div>
 </div></section>
 
 <section class="section" id="visuals"><div class="container">
-  <div class="section-head"><h2>🖼 Visual guides</h2><p class="muted">Five pictures that explain most of Git.</p></div>
+  <div class="section-head"><h2><i class="ic" data-icon="image"></i> Visual guides</h2><p class="muted">Five pictures that explain most of Git.</p></div>
   <h3>1 · Git vs GitHub</h3><div class="diagram" data-diagram="git-vs-github"></div>
   <h3>2 · Local vs remote repository</h3><div class="diagram" data-diagram="local-remote"></div>
   <h3>3 · Working directory → staging → commit → push</h3><div class="diagram" data-diagram="areas"></div>
   <h3>4 · Branches and merging</h3><div class="diagram" data-diagram="branches"></div>
   <h3>5 · Fork → clone → commit → push → pull request</h3><div class="diagram" data-diagram="flow"></div>
 </div></section>
-<section class="section" id="troubleshooting"><div class="container narrow"><div class="section-head"><h2>🛟 Troubleshooting</h2><p class="muted">Most errors are typos or being in the wrong folder. Read the message; it usually tells you what’s wrong.</p></div>
+<section class="section" id="troubleshooting"><div class="container narrow"><div class="section-head"><h2><i class="ic" data-icon="life-buoy"></i> Troubleshooting</h2><p class="muted">Most errors are typos or being in the wrong folder. Read the message; it usually tells you what’s wrong.</p></div>
 <details><summary><code class="inline">git: command not found</code> / “not recognized”</summary><p>Git isn’t installed or the terminal needs restarting. Install Git (Mission 0), then <strong>close and reopen</strong> the terminal.</p></details>
 <details><summary>“Author identity unknown”</summary><p>Set your name and email: <code class="inline">git config --global user.name "Name"</code> and <code class="inline">git config --global user.email "you@example.com"</code>, then commit again.</p></details>
 <details><summary>“fatal: not a git repository”</summary><p>You’re in the wrong folder. <code class="inline">cd</code> into the project folder (the one containing the hidden <code class="inline">.git</code> folder). <code class="inline">pwd</code> shows where you are.</p></details>
@@ -55,12 +55,12 @@
 <details><summary>“The current branch has no upstream branch”</summary><p>Use <code class="inline">git push -u origin &lt;branch-name&gt;</code> the first time.</p></details>
 <details><summary>“Updates were rejected because the remote contains work that you do not have”</summary><p>Your branch on GitHub has commits you don’t have locally. Run <code class="inline">git pull</code>, then <code class="inline">git push</code>. If it opens an editor for a merge message, save and close it.</p></details>
 <details><summary>“nothing to commit, working tree clean” but I just edited a file</summary><p>Your editor probably didn’t save, or you edited a file outside the project folder. Save (<kbd>Ctrl/Cmd+S</kbd>) and run <code class="inline">git status</code> again.</p></details>
-<details><summary>My pull request check is red ❌</summary><p>Open <em>Details</em> and read the message: usually a JSON typo (missing quote/comma), wrong filename (must be <code class="inline">your-username.json</code>), or extra files changed. Fix, <code class="inline">git add</code>, <code class="inline">git commit</code>, <code class="inline">git push</code>.</p></details>
+<details><summary>My pull request check is red <i class="ic" data-icon="x-circle"></i></summary><p>Open <em>Details</em> and read the message: usually a JSON typo (missing quote/comma), wrong filename (must be <code class="inline">your-username.json</code>), or extra files changed. Fix, <code class="inline">git add</code>, <code class="inline">git commit</code>, <code class="inline">git push</code>.</p></details>
 <details><summary>I’m merged but not on the wall</summary><p>The site rebuilds after a merge, which takes 1–3 minutes. Hard refresh (<kbd>Ctrl/Cmd+Shift+R</kbd>). Still missing? Ask a facilitator to look at the <em>Actions</em> tab.</p></details>
 <details><summary>Windows: PowerShell says running scripts is disabled</summary><p>You don’t need scripts for this workshop. If you see this after installing something, ignore it or ask a facilitator.</p></details>
 <details><summary>I want to start over</summary><p>Delete the cloned folder (carefully!) and run <code class="inline">git clone</code> again from Mission 2. Your fork on GitHub is unaffected.</p></details>
 <div class="callout info"><span class="callout-title">Still stuck?</span><p>Raise your hand, or copy the <em>exact</em> error text and show a facilitator. Nobody minds, we’ve all been there.</p></div></div></section>
-<section class="section" id="bonus"><div class="container narrow"><div class="section-head"><h2>🎯 Bonus missions</h2><p class="muted">Finished early? These are <strong>optional</strong> and <strong>intermediate</strong>. Don’t worry if you skip them. Type your username in the box on the <a href="learn.html">Learn page</a> to fill in the commands.</p></div>
+<section class="section" id="bonus"><div class="container narrow"><div class="section-head"><h2><i class="ic" data-icon="target"></i> Bonus missions</h2><p class="muted">Finished early? These are <strong>optional</strong> and <strong>intermediate</strong>. Don’t worry if you skip them. Type your username in the box on the <a href="learn.html">Learn page</a> to fill in the commands.</p></div>
 <article class="card" style="margin:22px 0"><span class="pill int">Intermediate · optional</span> <span class="pill opt">Bonus 1</span><h3 style="margin-top:10px">Edit your profile and make another commit</h3><p>Real projects are many small commits. Make a second one.</p><ol class="steps">
 <li>Open your profile (<code class="tpl inline">code participants/{{USERNAME}}.json</code>, or <code class="inline">nano</code>/<code class="inline">notepad</code> as in Mission 3) and change your fun fact. Save.</li>
 <li>Check, stage and commit:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git status
@@ -73,7 +73,7 @@ a1b2c3d Update README</pre></div>
 </li>
 <li>Push it: <code class="inline">git push</code> (no extra words needed, thanks to <code class="inline">-u</code>). If your PR is still open, it updates itself.</li>
 </ol>
-<div class="callout warn"><span class="callout-title">⚠️ Already merged?</span><p>If a facilitator already merged your PR, do <strong>Bonus 3</strong> first, then start a fresh branch with <code class="inline">git switch -c update-my-fact</code>, so you don’t get a conflict.</p>
+<div class="callout warn"><span class="callout-title"><i class="ic" data-icon="alert"></i> Already merged?</span><p>If a facilitator already merged your PR, do <strong>Bonus 3</strong> first, then start a fresh branch with <code class="inline">git switch -c update-my-fact</code>, so you don’t get a conflict.</p>
 </div>
 </article>
 <article class="card" style="margin:22px 0"><span class="pill int">Intermediate · optional</span> <span class="pill opt">Bonus 2</span><h3 style="margin-top:10px">Inspect changes with <code class="inline">git diff</code></h3><p>See exactly what changed, line by line, before you commit.</p><ol class="steps">
@@ -223,25 +223,27 @@ git commit -m "Resolve conflict"</code></pre></div>
 * 1a2b3c4 Add story</pre></div>
 </li>
 </ol>
-<div class="callout tip"><span class="callout-title">💡 Changed your mind mid-conflict?</span><p>Run <code class="inline">git merge --abort</code> to go back to before the merge.</p>
+<div class="callout tip"><span class="callout-title"><i class="ic" data-icon="bulb"></i> Changed your mind mid-conflict?</span><p>Run <code class="inline">git merge --abort</code> to go back to before the merge.</p>
 </div>
 </article>
 </div></section>
-<section class="section"><div class="container narrow"><div class="callout privacy"><span class="callout-title">🔒 Privacy reminder</span><p>Contributions to the Community Wall are <strong>public</strong>. Use a nickname, never personal details like your phone number, address, student ID or private email.</p></div></div></section>
+<section class="section"><div class="container narrow"><div class="callout privacy"><span class="callout-title"><i class="ic" data-icon="lock"></i> Privacy reminder</span><p>Contributions to the Community Wall are <strong>public</strong>. Use a nickname, never personal details like your phone number, address, student ID or private email.</p></div></div></section>
 
 </main>
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div><strong>GitHub Playground</strong><br>Your first open-source contribution 🚀</div>
+    <div><strong>GitHub Playground</strong><br>Your first open-source contribution <i class="ic" data-icon="rocket"></i></div>
     <div>
       <a data-link="upstream" href="#" target="_blank" rel="noopener">Workshop repository</a> ·
       <a href="resources.html">Cheat sheet</a> ·
-      <a href="materials/git-cheatsheet.html">Printable cheat sheet</a>
+      <a href="materials/git-cheatsheet.html">Printable cheat sheet</a> ·
+      <a href="materials/qr.html">QR code</a>
     </div>
     <div style="color:#b9b4d8">Everything you submit is public. Use a nickname, not personal info.</div>
   </div>
 </footer>
 <script src="js/config.js"></script>
+<script src="js/icons.js"></script>
 <script src="js/diagrams.js"></script>
 <script src="js/app.js"></script>
 </body>

@@ -113,7 +113,7 @@
     const code = btn.closest('.term').querySelector('code.cmd');
     if (!code) return;
     copyText(code.dataset.raw || code.textContent).then(() => {
-      btn.textContent = 'Copied ✓'; btn.classList.add('done');
+      btn.textContent = 'Copied'; btn.classList.add('done');
     }, () => { btn.textContent = 'Press Ctrl/Cmd+C'; });
     setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1800);
   });
@@ -150,7 +150,7 @@
   if (!configured) {
     const bar = document.createElement('div');
     bar.className = 'cfg-banner';
-    bar.textContent = '🛠 Preview mode: repository owner not detected, so links use "OWNER". On GitHub Pages this is automatic (or set owner/repo in js/config.js).';
+    bar.textContent = 'Preview mode: repository owner not detected, so links use "OWNER". On GitHub Pages this is automatic (or set owner/repo in js/config.js).';
     document.body.prepend(bar);
   }
 
@@ -174,7 +174,7 @@
       const id = document.createElement('a'); id.className = 'wall-id'; id.textContent = '@' + p.id;
       id.href = 'https://github.com/' + encodeURIComponent(p.id); id.target = '_blank'; id.rel = 'noopener noreferrer';
       el.append(em, nm, ft, id);
-      if (el.classList.contains('is-me')) { const b = document.createElement('span'); b.className = 'wall-me'; b.textContent = "That's you! 🎉"; el.append(b); }
+      if (el.classList.contains('is-me')) { const b = document.createElement('span'); b.className = 'wall-me'; b.textContent = "That's you"; el.append(b); }
       return el;
     }
 
@@ -190,7 +190,7 @@
         document.getElementById('wall-empty').hidden = list.length > 0;
         const when = data.generatedAt ? new Date(data.generatedAt) : null;
         updEl.textContent = when && !isNaN(when) ? 'Wall rebuilt at ' + when.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '';
-        statusEl.textContent = manual ? 'Up to date ✓' : '';
+        statusEl.textContent = manual ? 'Up to date' : '';
       } catch (err) {
         statusEl.textContent = 'Could not load the wall right now. Try again in a moment.';
       }

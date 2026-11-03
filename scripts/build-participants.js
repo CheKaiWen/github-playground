@@ -6,10 +6,12 @@ const path = require('path');
 const { ROOT, listParticipantFiles, checkFile, readEntry } = require('./lib');
 
 const entries = [];
+// sample.json is the template participants copy. It is validated but never shown on the wall.
 for (const f of listParticipantFiles()) {
+  if (f === 'sample.json') continue;
   const problems = checkFile(f);
   if (problems.length) {
-    console.warn(`⚠️  Skipping ${f}:\n   - ${problems.join('\n   - ')}`);
+    console.warn(`WARN: skipping ${f}:\n   - ${problems.join('\n   - ')}`);
     continue;
   }
   entries.push(readEntry(f));

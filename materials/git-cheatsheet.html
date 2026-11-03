@@ -27,26 +27,26 @@
 </style>
 </head>
 <body>
-<div class="printbar">🖨 <button onclick="window.print()">Print / Save as PDF</button> <span style="font-size:12px">Tip: set margins to “Default” and tick “Background graphics”.</span></div>
+<div class="printbar"><button onclick="window.print()">Print / Save as PDF</button> <span style="font-size:12px">Tip: set margins to “Default” and tick “Background graphics”.</span></div>
 <div class="page">
-<header><h1>Git Cheat Sheet<small>GitHub Playground · your first open-source contribution</small></h1><div style="font-size:30px">🚀</div></header>
+<header><h1>Git Cheat Sheet<small>GitHub Playground · your first open-source contribution</small></h1><div><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1f1b3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div></header>
 <h2>Setup</h2><div class="row"><code>git --version</code><span>Check that Git is installed.</span></div><div class="row"><code>git config --global user.name "Your Name"</code><span>Set the name shown on your commits.</span></div><div class="row"><code>git config --global user.email "you@example.com"</code><span>Set the email shown on your commits.</span></div><h2>Get a project</h2><div class="row"><code>git clone &lt;repo-url&gt;</code><span>Download a repository to your computer.</span></div><div class="row"><code>git remote -v</code><span>Show which online repositories this one is linked to.</span></div><h2>Look around</h2><div class="row"><code>git status</code><span>Show what changed and what is staged.</span></div><div class="row"><code>git log --oneline</code><span>Show the history, one short line per commit.</span></div><h2>Save your work</h2><div class="row"><code>git switch -c &lt;branch-name&gt;</code><span>Create a new branch and switch to it.</span></div><div class="row"><code>git add &lt;file&gt;</code><span>Stage a file so it goes into the next commit.</span></div><div class="row"><code>git commit -m "message"</code><span>Save a snapshot of the staged files with a note.</span></div><h2>Share</h2><div class="row"><code>git push -u origin &lt;branch-name&gt;</code><span>Upload your branch to GitHub and remember the link.</span></div><div class="row"><code>git pull</code><span>Download and merge new changes from GitHub.</span></div>
 <div class="flow">
 <svg viewBox="0 0 700 120" role="img" aria-label="Git workflow: working folder, staging area, local history, GitHub, pull request">
 <defs><marker id="h" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1f1b3a"/></marker></defs>
 <g>
-<rect class="b" x="4" y="14" width="118" height="64" rx="12" style="fill:#ffe9a8"/><text class="t" x="63" y="42" text-anchor="middle">📝 Working</text><text class="x" x="63" y="62" text-anchor="middle">edit files</text>
-<rect class="b" x="152" y="14" width="118" height="64" rx="12" style="fill:#e3dcff"/><text class="t" x="211" y="42" text-anchor="middle">🛒 Staging</text><text class="x" x="211" y="62" text-anchor="middle">choose changes</text>
-<rect class="b" x="300" y="14" width="118" height="64" rx="12" style="fill:#cdf5e8"/><text class="t" x="359" y="42" text-anchor="middle">📸 Local repo</text><text class="x" x="359" y="62" text-anchor="middle">saved commits</text>
-<rect class="b" x="448" y="14" width="118" height="64" rx="12" style="fill:#d3effb"/><text class="t" x="507" y="42" text-anchor="middle">☁️ Your fork</text><text class="x" x="507" y="62" text-anchor="middle">on GitHub</text>
-<rect class="b" x="596" y="14" width="100" height="64" rx="12" style="fill:#ffd0e0"/><text class="t" x="646" y="42" text-anchor="middle">🔀 Pull Req</text><text class="x" x="646" y="62" text-anchor="middle">ask to merge</text>
+<rect class="b" x="4" y="14" width="118" height="64" rx="12" style="fill:#ffe9a8"/><text class="t" x="63" y="42" text-anchor="middle">Working</text><text class="x" x="63" y="62" text-anchor="middle">edit files</text>
+<rect class="b" x="152" y="14" width="118" height="64" rx="12" style="fill:#e3dcff"/><text class="t" x="211" y="42" text-anchor="middle">Staging</text><text class="x" x="211" y="62" text-anchor="middle">choose changes</text>
+<rect class="b" x="300" y="14" width="118" height="64" rx="12" style="fill:#cdf5e8"/><text class="t" x="359" y="42" text-anchor="middle">Local repo</text><text class="x" x="359" y="62" text-anchor="middle">saved commits</text>
+<rect class="b" x="448" y="14" width="118" height="64" rx="12" style="fill:#d3effb"/><text class="t" x="507" y="42" text-anchor="middle">Your fork</text><text class="x" x="507" y="62" text-anchor="middle">on GitHub</text>
+<rect class="b" x="596" y="14" width="100" height="64" rx="12" style="fill:#ffd0e0"/><text class="t" x="646" y="42" text-anchor="middle">Pull Req</text><text class="x" x="646" y="62" text-anchor="middle">ask to merge</text>
 <g stroke="#1f1b3a" stroke-width="3" marker-end="url(#h)"><line x1="124" y1="46" x2="148" y2="46"/><line x1="272" y1="46" x2="296" y2="46"/><line x1="420" y1="46" x2="444" y2="46"/><line x1="568" y1="46" x2="592" y2="46"/></g>
 <text class="s" x="136" y="100" text-anchor="middle">add</text><text class="s" x="284" y="100" text-anchor="middle">commit</text><text class="s" x="432" y="100" text-anchor="middle">push</text><text class="s" x="580" y="100" text-anchor="middle">website</text>
 </g></svg>
 </div>
 <div class="tips">
-<div class="box"><h3>🧭 Terminal basics</h3><ul><li><code>pwd</code> where am I?</li><li><code>ls</code> what's here?</li><li><code>cd folder</code> go in · <code>cd ..</code> go out</li><li><kbd>Tab</kbd> autocompletes · <kbd>↑</kbd> repeats</li></ul></div>
-<div class="box"><h3>🆘 When stuck</h3><ul><li>Run <code>git status</code> first: it explains a lot.</li><li>In a weird editor? <kbd>Esc</kbd> then <code>:q!</code> Enter</li><li>Wrong folder? Check <code>pwd</code></li><li>Never paste your GitHub password in the terminal.</li></ul></div>
+<div class="box"><h3>Terminal basics</h3><ul><li><code>pwd</code> where am I?</li><li><code>ls</code> what's here?</li><li><code>cd folder</code> go in · <code>cd ..</code> go out</li><li><kbd>Tab</kbd> autocompletes · <kbd>↑</kbd> repeats</li></ul></div>
+<div class="box"><h3>When stuck</h3><ul><li>Run <code>git status</code> first: it explains a lot.</li><li>In a weird editor? <kbd>Esc</kbd> then <code>:q!</code> Enter</li><li>Wrong folder? Check <code>pwd</code></li><li>Never paste your GitHub password in the terminal.</li></ul></div>
 </div>
 <footer><span>Everything you push to GitHub is public. Use a nickname!</span><span>Fork → Clone → Branch → Commit → Push → Pull Request</span></footer>
 </div>

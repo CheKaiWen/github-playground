@@ -253,3 +253,27 @@ details > :not(summary):last-child { margin-bottom: 14px; }
   .mission { display: block !important; page-break-after: always; }
   .learn-layout { display: block; }
 }
+
+/* GitHub Desktop alternative blocks */
+details.desktop { background: #e7f6fd; border-style: dashed; margin: 22px 0; }
+details.desktop[open] { border-style: solid; }
+
+/* ── Icons (replace emoji) ── */
+.ic { display: inline-block; width: 1.15em; height: 1.15em; vertical-align: -.2em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.ic-xl { width: 2.2rem; height: 2.2rem; }
+.btn .ic { vertical-align: -.22em; }
+.callout-title { display: flex; align-items: center; gap: 8px; }
+.callout-title .ic { width: 1.25em; height: 1.25em; }
+.block > h3 .ico .ic { width: 20px; height: 20px; vertical-align: 0; }
+.float-tile { position: absolute; display: grid; place-items: center; width: 64px; height: 64px; border: 3px solid var(--ink); border-radius: 18px; box-shadow: var(--shadow-s); animation: bob 4s ease-in-out infinite; }
+.float-tile .ic { width: 30px; height: 30px; }
+.float-tile:nth-child(2) { animation-delay: -1s; } .float-tile:nth-child(3) { animation-delay: -2s; } .float-tile:nth-child(4) { animation-delay: -3s; }
+.analogy .big { display: grid; place-items: center; flex: none; width: 52px; height: 52px; background: var(--yellow); border: 3px solid var(--ink); border-radius: 14px; }
+.analogy .big .ic { width: 26px; height: 26px; }
+.done-screen .big-emoji { display: grid; place-items: center; width: 110px; height: 110px; margin: 0 auto 14px; background: var(--yellow); border: 3px solid var(--ink); border-radius: 50%; box-shadow: var(--shadow); }
+.done-screen .big-emoji .ic { width: 56px; height: 56px; }
+.learned li::before { content: "\2713\00a0"; font-weight: 900; color: #1a9c73; }
+.wall-empty .ic { width: 48px; height: 48px; }
+.step-btn .lbl .ic { width: 1.1em; height: 1.1em; margin-right: 2px; }
+.sv-ic { fill: none; stroke: #1f1b3a; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.checkpoint h3 .ic { color: #1a9c73; }

@@ -29,7 +29,7 @@
     const b = document.createElement('button');
     b.type = 'button'; b.className = 'step-btn'; b.dataset.go = id;
     b.innerHTML = '<span class="n"><span>' + i + '</span></span><span class="lbl"></span>';
-    b.querySelector('.lbl').innerHTML = m.dataset.emoji + ' ' + m.dataset.title;
+    b.querySelector('.lbl').innerHTML = window.icon(m.dataset.icon) + ' ' + m.dataset.title;
     li.appendChild(b); stepper.appendChild(li);
   });
   stepper.addEventListener('click', (e) => { const b = e.target.closest('[data-go]'); if (b) go(b.dataset.go); });

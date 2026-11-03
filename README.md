@@ -1,4 +1,4 @@
-# 🚀 GitHub Playground: Your First Open-Source Contribution
+# GitHub Playground: Your First Open-Source Contribution
 
 A self-paced, hands-on Git & GitHub workshop for beginners. Every participant learns Git **in the terminal**, then adds a profile (nickname, emoji, fun fact) to a live **Community Wall** through a real pull request.
 
@@ -47,7 +47,7 @@ GitHub Pages serves the site; js/app.js fetches the manifest and renders cards w
 A participant file looks like:
 
 ```json
-{ "name": "Alex", "emoji": "🚀", "fact": "I love building robots!" }
+{ "name": "Alex", "emoji": "", "fact": "I love building robots!" }
 ```
 
 Rules (enforced by `scripts/validate-participants.js`): file name = username + `.json`; exactly the fields `name` (≤30), `emoji` (≤16 chars, must contain an emoji), `fact` (≤140); no control characters or `<`/`>`; file ≤ 2000 chars.

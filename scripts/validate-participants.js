@@ -11,10 +11,10 @@ let failed = 0;
 for (const f of files) {
   const problems = checkFile(f);
   if (problems.length === 0) {
-    console.log(`✅ ${f}`);
+    console.log(`PASS ${f}`);
   } else {
     failed++;
-    console.log(`❌ ${f}`);
+    console.log(`FAIL ${f}`);
     for (const p of problems) {
       console.log(`   - ${p}`);
       // GitHub Actions turns this into an annotation on the PR

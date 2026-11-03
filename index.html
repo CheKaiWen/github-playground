@@ -13,7 +13,7 @@
 <header class="site-header">
   <div class="container">
     <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&lt;/&gt;</span> GitHub Playground</a>
-    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><i class="ic" data-icon="menu"></i> Menu</button>
     <nav id="site-nav" class="nav" aria-label="Main">
       <a data-nav="home" href="index.html">Home</a>
       <a data-nav="learn" href="learn.html">Learn</a>
@@ -25,27 +25,27 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="eyebrow">🎓 Campus workshop · self-paced · ~60 min</span>
+      <span class="eyebrow"><i class="ic" data-icon="cap"></i> Campus workshop · self-paced · ~60 min</span>
       <h1>Make your first <span class="hl">open-source</span> contribution.</h1>
       <p class="lead">Learn Git the way developers really use it: in the <strong>terminal</strong>. Add your emoji and a fun fact to the live Community Wall below, and join everyone else who did it today.</p>
       <div class="cta-row">
-        <a class="btn btn-primary btn-lg" href="learn.html">🚀 Start Learning</a>
-        <a class="btn btn-lg" href="#wall">👀 See the Wall</a>
+        <a class="btn btn-primary btn-lg" href="learn.html"><i class="ic" data-icon="rocket"></i> Start Learning</a>
+        <a class="btn btn-lg" href="#wall"><i class="ic" data-icon="eye"></i> See the Wall</a>
       </div>
       <p class="hint" style="margin-top:16px">No account needed on this site. Your progress is saved in <em>your</em> browser only.</p>
     </div>
     <div class="hero-art" aria-hidden="true">
-      <span class="float" style="left:2%;top:0">🚀</span>
-      <span class="float" style="right:6%;top:10%">🐙</span>
-      <span class="float" style="left:12%;bottom:-6%">🌟</span>
-      <span class="float" style="right:0;bottom:6%">💻</span>
+      <span class="float-tile" style="left:2%;top:0;background:var(--yellow)"><i class="ic" data-icon="rocket"></i></span>
+      <span class="float-tile" style="right:6%;top:10%;background:var(--pink)"><i class="ic" data-icon="git-pull-request"></i></span>
+      <span class="float-tile" style="left:12%;bottom:-6%;background:var(--mint)"><i class="ic" data-icon="git-branch"></i></span>
+      <span class="float-tile" style="right:0;bottom:6%;background:var(--blue)"><i class="ic" data-icon="terminal"></i></span>
       <div class="term hero-terminal">
         <div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span></div>
 <pre><code><span class="tok-cmd">git</span> <span class="tok-sub">switch</span> <span class="tok-flag">-c</span> add-my-profile
 <span class="tok-cmd">git</span> <span class="tok-sub">add</span> participants/me.json
 <span class="tok-cmd">git</span> <span class="tok-sub">commit</span> <span class="tok-flag">-m</span> <span class="tok-str">"Add my profile"</span>
 <span class="tok-cmd">git</span> <span class="tok-sub">push</span> <span class="tok-flag">-u</span> origin add-my-profile
-<span class="tok-com"># ...and you're on the wall! ✨</span></code></pre>
+<span class="tok-com"># ...and you're on the wall!</span></code></pre>
       </div>
     </div>
   </div>
@@ -66,18 +66,18 @@
 <section class="section" id="wall">
   <div class="container">
     <div class="wall-top">
-      <div class="section-head" style="margin:0"><h2>🧱 The Community Wall</h2><p class="muted" style="margin:0">Every card below was added by a real person using Git. You're next!</p></div>
+      <div class="section-head" style="margin:0"><h2><i class="ic" data-icon="grid"></i> The Community Wall</h2><p class="muted" style="margin:0">Every card below was added by a real person using Git. You're next!</p></div>
       <div class="wall-meta">
         <span><span class="wall-count-badge" id="wall-count">0</span> contributors</span>
-        <button class="btn" id="wall-refresh" type="button" style="padding:6px 14px">↻ Refresh</button>
+        <button class="btn" id="wall-refresh" type="button" style="padding:6px 14px"><i class="ic" data-icon="refresh"></i> Refresh</button>
         <span id="wall-updated"></span>
         <span id="wall-status" role="status" aria-live="polite"></span>
       </div>
     </div>
     <div id="wall-grid" class="wall-grid" aria-live="polite"></div>
-    <div id="wall-empty" class="wall-empty" hidden><div style="font-size:3rem">🌱</div><h3>The wall is empty... for now!</h3><p>Be the first one to plant something here. Start with Mission 0.</p></div>
+    <div id="wall-empty" class="wall-empty" hidden><div><i class="ic" data-icon="sprout"></i></div><h3>The wall is empty... for now!</h3><p>Be the first one to plant something here. Start with Mission 0.</p></div>
     <div class="callout info" style="margin-top:24px">
-      <strong>⏱ Merged but not showing yet?</strong> After a facilitator merges your pull request, GitHub rebuilds this site. That usually takes <strong>1–3 minutes</strong>. Wait a bit, then press <kbd>↻ Refresh</kbd> (or reload the page).
+      <strong><i class="ic" data-icon="clock"></i> Merged but not showing yet?</strong> After a facilitator merges your pull request, GitHub rebuilds this site. That usually takes <strong>1–3 minutes</strong>. Wait a bit, then press <kbd><i class="ic" data-icon="refresh"></i> Refresh</kbd> (or reload the page).
     </div>
   </div>
 </section>
@@ -85,7 +85,7 @@
 <section class="section">
   <div class="container narrow">
     <div class="callout privacy">
-      <span class="callout-title">🔒 Privacy: this is all public</span>
+      <span class="callout-title"><i class="ic" data-icon="lock"></i> Privacy: this is all public</span>
       <p>The Community Wall, your GitHub username, your commits and your pull request are visible to <strong>anyone on the internet</strong> and can be copied or cached, even if deleted later.</p>
       <ul>
         <li>Use a <strong>nickname</strong>, not your full name.</li>
@@ -103,16 +103,18 @@
 </main>
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div><strong>GitHub Playground</strong><br>Your first open-source contribution 🚀</div>
+    <div><strong>GitHub Playground</strong><br>Your first open-source contribution <i class="ic" data-icon="rocket"></i></div>
     <div>
       <a data-link="upstream" href="#" target="_blank" rel="noopener">Workshop repository</a> ·
       <a href="resources.html">Cheat sheet</a> ·
-      <a href="materials/git-cheatsheet.html">Printable cheat sheet</a>
+      <a href="materials/git-cheatsheet.html">Printable cheat sheet</a> ·
+      <a href="materials/qr.html">QR code</a>
     </div>
     <div style="color:#b9b4d8">Everything you submit is public. Use a nickname, not personal info.</div>
   </div>
 </footer>
 <script src="js/config.js"></script>
+<script src="js/icons.js"></script>
 <script src="js/diagrams.js"></script>
 <script src="js/app.js"></script>
 </body>

@@ -1,4 +1,4 @@
-## 👋 Add my profile to the Community Wall
+## Add my profile to the Community Wall
 
 **My GitHub username:** <!-- e.g. alex-123 -->
 

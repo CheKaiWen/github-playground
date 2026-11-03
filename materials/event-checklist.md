@@ -27,6 +27,5 @@
 - [ ] Point early finishers to Resources → Bonus missions
 
 ## After
-- [ ] Final bulk merge; wait for green deploy; screenshot the Wall 📸
-- [ ] Share the site link
+- [ ] Final bulk merge; wait for green deploy; screenshot the Wall - [ ] Share the site link
 - [ ] Optional reset: remove all but `participants/sample.json`

@@ -13,7 +13,7 @@
 <header class="site-header">
   <div class="container">
     <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&lt;/&gt;</span> GitHub Playground</a>
-    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><i class="ic" data-icon="menu"></i> Menu</button>
     <nav id="site-nav" class="nav" aria-label="Main">
       <a data-nav="home" href="index.html">Home</a>
       <a data-nav="learn" href="learn.html">Learn</a>
@@ -35,18 +35,18 @@
   <ol class="stepper" id="stepper" aria-label="Missions"></ol>
 </aside>
 <div id="missions">
-<article class="mission" id="m0" data-title="Setup Your Environment" data-emoji="🧰" aria-labelledby="m0-h">
-<header><div class="kicker">Mission 0 of 5</div><h2 id="m0-h">🧰 Setup Your Environment</h2><p class="lead">Open the terminal, install Git, and sign in to GitHub. About 15 minutes.</p></header>
-<section class="block"><h3><span class="ico" aria-hidden="true">💡</span>What is this?</h3>
+<article class="mission" id="m0" data-title="Setup Your Environment" data-icon="wrench" aria-labelledby="m0-h">
+<header><div class="kicker">Mission 0 of 5</div><h2 id="m0-h"><i class="ic" data-icon="wrench"></i> Setup Your Environment</h2><p class="lead">Open the terminal, install Git, and sign in to GitHub. About 15 minutes.</p></header>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="bulb"></i></span>What is this?</h3>
 <p>The <strong>terminal</strong> is a window where you type instructions to your computer instead of clicking. It looks old-school, but it is how most developers talk to Git, and it is faster than you think.</p>
 <p>Think of it as <strong>texting your computer</strong>: you type a command, press <kbd>Enter</kbd>, and it replies.</p>
-<p>In this mission you will get your computer and your GitHub account ready. It is the longest mission, and everything after it is faster. 💪</p>
+<p>In this mission you will get your computer and your GitHub account ready. It is the longest mission, and everything after it is faster. </p>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🎯</span>Why it matters</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="target"></i></span>Why it matters</h3>
 <p>Git needs to know <em>who you are</em> (so your work has your name on it), and GitHub needs to trust your computer (so nobody else can push changes as you). Doing this once means you never think about it again.</p>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🪜</span>Step by step</h3>
-<div class="os-picker"><strong>Which computer are you on?</strong><div class="os-switch" role="group" aria-label="Operating system"><button type="button" data-set-os="mac">🍎 macOS</button><button type="button" data-set-os="win">🪟 Windows</button><button type="button" data-set-os="linux">🐧 Linux</button></div></div>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="list"></i></span>Step by step</h3>
+<div class="os-picker"><strong>Which computer are you on?</strong><div class="os-switch" role="group" aria-label="Operating system"><button type="button" data-set-os="mac">macOS</button><button type="button" data-set-os="win">Windows</button><button type="button" data-set-os="linux">Linux</button></div></div>
 <ol class="steps">
 <li><strong>Open your terminal.</strong><div class="os os-mac"><p>Press <kbd>⌘ Cmd</kbd> + <kbd>Space</kbd>, type <strong>Terminal</strong>, press <kbd>Enter</kbd>.</p>
 </div>
@@ -54,7 +54,7 @@
 </div>
 <div class="os os-linux"><p>Press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>, or search your apps for <strong>Terminal</strong>.</p>
 </div>
-<div class="callout info"><span class="callout-title">ℹ️ Don’t worry about breaking things</span><p>Typing a command wrong just gives an error message. Nothing explodes. You can always press <kbd>Ctrl</kbd> + <kbd>C</kbd> to cancel a command that seems stuck.</p>
+<div class="callout info"><span class="callout-title"><i class="ic" data-icon="info"></i> Don’t worry about breaking things</span><p>Typing a command wrong just gives an error message. Nothing explodes. You can always press <kbd>Ctrl</kbd> + <kbd>C</kbd> to cancel a command that seems stuck.</p>
 </div>
 </li>
 <li><strong>Learn three survival commands.</strong> Type each one and press <kbd>Enter</kbd>.<p><code class="inline">pwd</code> = “<strong>p</strong>rint <strong>w</strong>orking <strong>d</strong>irectory”. It tells you which folder you are standing in.</p>
@@ -85,7 +85,7 @@ d-r---  03/11/2026  09:12          Downloads</pre></div>
 <div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">cd Documents
 pwd
 cd ..</code></pre></div>
-<div class="callout tip"><span class="callout-title">💡 Tab is your best friend</span><p>Type the first few letters of a folder (like <code class="inline">Doc</code>) and press <kbd>Tab</kbd>. The terminal completes the name. Press <kbd>↑</kbd> to bring back the previous command.</p>
+<div class="callout tip"><span class="callout-title"><i class="ic" data-icon="bulb"></i> Tab is your best friend</span><p>Type the first few letters of a folder (like <code class="inline">Doc</code>) and press <kbd>Tab</kbd>. The terminal completes the name. Press <kbd>↑</kbd> to bring back the previous command.</p>
 </div>
 </li>
 <li><strong>Make a workshop folder</strong> in your home folder and step into it. All your work today will live here.<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">cd ~
@@ -93,13 +93,13 @@ mkdir workshop
 cd workshop
 pwd</code></pre></div>
 <div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output (your path will differ)</span></div><pre>/Users/alex/workshop</pre></div>
-<div class="callout warn"><span class="callout-title">⚠️ Avoid OneDrive / iCloud / Dropbox folders</span><p>Cloud-synced folders (like Windows “Documents” when OneDrive is on) can corrupt Git projects. That is why we use a plain <code class="inline">workshop</code> folder in your home directory.</p>
+<div class="callout warn"><span class="callout-title"><i class="ic" data-icon="alert"></i> Avoid OneDrive / iCloud / Dropbox folders</span><p>Cloud-synced folders (like Windows “Documents” when OneDrive is on) can corrupt Git projects. That is why we use a plain <code class="inline">workshop</code> folder in your home directory.</p>
 </div>
 </li>
 <li><strong>Is Git installed?</strong> Run:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git --version</code></pre></div>
 <div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">If Git is installed</span></div><pre>git version 2.45.1</pre></div>
 <div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">If it is missing (Windows says “'git' is not recognized…”)</span></div><pre>git: command not found</pre></div>
-<p>Got a version number? ✅ Skip to the next step. If not, install Git:</p>
+<p>Got a version number? <i class="ic" data-icon="check-circle"></i> Skip to the next step. If not, install Git:</p>
 <div class="os os-mac"><p>Running <code class="inline">git --version</code> on a Mac usually pops up a window offering to install the <strong>Command Line Developer Tools</strong>. Click <strong>Install</strong>, wait a few minutes, then run <code class="inline">git --version</code> again.</p>
 </div>
 <div class="os os-win"><p>Easiest way, in PowerShell:</p>
@@ -118,10 +118,10 @@ git config --global user.email "you@example.com"</code></pre></div>
 <div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git config --global --list</code></pre></div>
 <div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre>user.name=Alex
 user.email=12345678+alex-123@users.noreply.github.com</pre></div>
-<div class="callout tip"><span class="callout-title">💡 Where do I find my private GitHub email?</span><p>After creating your GitHub account (next step): <strong>GitHub → Settings → Emails</strong>. Tick <em>“Keep my email addresses private”</em> and copy the address that looks like <code class="inline">12345678+username@users.noreply.github.com</code>. Then re-run the <code class="inline">user.email</code> command with it.</p>
+<div class="callout tip"><span class="callout-title"><i class="ic" data-icon="bulb"></i> Where do I find my private GitHub email?</span><p>After creating your GitHub account (next step): <strong>GitHub → Settings → Emails</strong>. Tick <em>“Keep my email addresses private”</em> and copy the address that looks like <code class="inline">12345678+username@users.noreply.github.com</code>. Then re-run the <code class="inline">user.email</code> command with it.</p>
 </div>
 </li>
-<li><strong>Create (or log in to) your GitHub account</strong> at <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a>. Verify your email address. Choose a username you are happy to have <em>public</em>. Then type it in the <strong>“Your GitHub username”</strong> box on this page, and all the commands will fill in your name for you. ✨</li>
+<li><strong>Create (or log in to) your GitHub account</strong> at <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a>. Verify your email address. Choose a username you are happy to have <em>public</em>. Then type it in the <strong>“Your GitHub username”</strong> box on this page, and all the commands will fill in your name for you. </li>
 <li><strong>Let your computer prove it is you (authentication).</strong> The simplest reliable way is the <strong>GitHub CLI</strong> (<code class="inline">gh</code>). It signs you in through your browser and gives Git a secure key. First install it:<div class="os os-mac"><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Homebrew</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">brew install gh</code></pre></div>
 <p>No Homebrew? Download the installer from <a href="https://cli.github.com" target="_blank" rel="noopener">cli.github.com</a>.</p>
 </div>
@@ -145,12 +145,13 @@ Press Enter to open github.com in your browser...
 ✓ Logged in as alex-123</pre></div>
 <p>Check that it worked:</p>
 <div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">gh auth status</code></pre></div>
-<div class="callout danger"><span class="callout-title">🛑 Never type your GitHub password into Git</span><p>GitHub does <strong>not</strong> accept account passwords for Git commands, and you should never paste your password into a terminal. Use the browser login above (or a Personal Access Token, see troubleshooting).</p>
+<div class="callout danger"><span class="callout-title"><i class="ic" data-icon="stop"></i> Never type your GitHub password into Git</span><p>GitHub does <strong>not</strong> accept account passwords for Git commands, and you should never paste your password into a terminal. Use the browser login above (or a Personal Access Token, see troubleshooting).</p>
 </div>
 </li>
 </ol>
+<details class="desktop"><summary><i class="ic" data-icon="monitor"></i> Prefer clicking to typing? Do this in GitHub Desktop instead</summary><p class="hint">Same Git underneath, just buttons. Great if the terminal is blocking you. You can still switch to the terminal steps above any time.</p><ol class="steps"><li><strong>Install GitHub Desktop</strong> (macOS and Windows only) from <a href="https://desktop.github.com" target="_blank" rel="noopener">desktop.github.com</a>. It includes Git, so you can skip the Git install and <code class="inline">git config</code> steps. <em>Linux users: please use the terminal steps.</em></li><li>Create your GitHub account (the account step above) if you do not have one.</li><li>Open GitHub Desktop, choose <strong>Sign in to GitHub.com</strong>, your browser opens, click <strong>Authorize desktop</strong>. This replaces <code class="inline">gh auth login</code>. No password typing.</li><li>It asks for your name and email. Use your <strong>nickname</strong> and your private <code class="inline">noreply</code> email (see the tip above). You can change them later in <em>Settings / Options, Git</em>.</li></ol></details>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🛟</span>Common mistakes &amp; troubleshooting</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="life-buoy"></i></span>Common mistakes &amp; troubleshooting</h3>
 <details><summary>“git: command not found” / “git is not recognized”</summary><p>Git is not installed, or the terminal was opened <em>before</em> installing. <strong>Close the terminal completely and open a new one</strong>, then try again. Still failing? Redo the install step for your system.</p>
 </details>
 <details><summary>“gh: command not found”</summary><p>Same idea: close and reopen the terminal after installing. On Windows, if it still fails, sign out and in again, or use the installer from cli.github.com.</p>
@@ -164,12 +165,12 @@ Press Enter to open github.com in your browser...
 <details><summary>I mistyped my name or email</summary><p>Just run the <code class="inline">git config --global …</code> command again with the right value. It overwrites the old one.</p>
 </details>
 </section>
-<section class="checkpoint"><h3>✅ Success checkpoint</h3>
+<section class="checkpoint"><h3><i class="ic" data-icon="check-circle"></i> Success checkpoint</h3>
 <label class="check"><input type="checkbox"> <span>My terminal is open and I can run <code class="inline">pwd</code>, <code class="inline">ls</code> and <code class="inline">cd</code>.</span></label>
-<label class="check"><input type="checkbox"> <span><code class="inline">git --version</code> shows a version number.</span></label>
-<label class="check"><input type="checkbox"> <span><code class="inline">git config --global --list</code> shows my name and email.</span></label>
+<label class="check"><input type="checkbox"> <span><code class="inline">git --version</code> shows a version number. <em>(Desktop: the app is installed.)</em></span></label>
+<label class="check"><input type="checkbox"> <span><code class="inline">git config --global --list</code> shows my name and email. <em>(Desktop: name/email set in the app.)</em></span></label>
 <label class="check"><input type="checkbox"> <span>I have a GitHub account and typed my username into the box on this page.</span></label>
-<label class="check"><input type="checkbox"> <span><code class="inline">gh auth status</code> says I am logged in to github.com.</span></label>
+<label class="check"><input type="checkbox"> <span><code class="inline">gh auth status</code> says I am logged in to github.com. <em>(Desktop: I am signed in in the app.)</em></span></label>
 </section>
 
 <div class="mission-nav">
@@ -178,27 +179,27 @@ Press Enter to open github.com in your browser...
   <button class="btn btn-primary next-btn" type="button" data-next="m1" disabled>Mission 1 →</button>
 </div>
 </article>
-<article class="mission" id="m1" data-title="Understanding Git &amp; GitHub" data-emoji="🧠" aria-labelledby="m1-h">
-<header><div class="kicker">Mission 1 of 5</div><h2 id="m1-h">🧠 Understanding Git &amp; GitHub</h2><p class="lead">The big ideas, with pictures. Then fork the workshop repo. About 10 minutes.</p></header>
-<section class="block"><h3><span class="ico" aria-hidden="true">💡</span>What is this?</h3>
+<article class="mission" id="m1" data-title="Understanding Git &amp; GitHub" data-icon="book" aria-labelledby="m1-h">
+<header><div class="kicker">Mission 1 of 5</div><h2 id="m1-h"><i class="ic" data-icon="book"></i> Understanding Git &amp; GitHub</h2><p class="lead">The big ideas, with pictures. Then fork the workshop repo. About 10 minutes.</p></header>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="bulb"></i></span>What is this?</h3>
 <p><strong>Version control</strong> is a system that remembers every version of your project, like “Version history” in Google Docs, or save points in a video game. If you break something, you can go back.</p>
-<div class="analogy"><div class="big">🎮</div><div><strong>Real-world analogy:</strong> Instead of saving <code class="inline">essay_final.docx</code>, <code class="inline">essay_final_v2.docx</code>, <code class="inline">essay_REALLY_final.docx</code>, you keep <em>one</em> file, and the system quietly keeps every earlier version, with a note about who changed what and why.</div></div><h4>Git vs GitHub</h4><div class="diagram" data-diagram="git-vs-github"></div><div class="table-wrap"><table class="compare"><tr><th></th><th>Git</th><th>GitHub</th></tr><tr><td><strong>What</strong></td><td>A program</td><td>A website / company</td></tr><tr><td><strong>Where</strong></td><td>On your computer</td><td>On the internet</td></tr><tr><td><strong>Does</strong></td><td>Tracks changes to files</td><td>Stores projects online, lets people collaborate</td></tr><tr><td><strong>Needs internet?</strong></td><td>No</td><td>Yes</td></tr></table></div><h4>Repository, local &amp; remote</h4><p>A <strong>repository</strong> (“repo”) is a project folder that Git is watching, including its whole history. You will have <strong>two</strong> copies: a <strong>local</strong> repo on your laptop and a <strong>remote</strong> repo on GitHub.</p>
+<div class="analogy"><div class="big"><i class="ic" data-icon="gamepad"></i></div><div><strong>Real-world analogy:</strong> Instead of saving <code class="inline">essay_final.docx</code>, <code class="inline">essay_final_v2.docx</code>, <code class="inline">essay_REALLY_final.docx</code>, you keep <em>one</em> file, and the system quietly keeps every earlier version, with a note about who changed what and why.</div></div><h4>Git vs GitHub</h4><div class="diagram" data-diagram="git-vs-github"></div><div class="table-wrap"><table class="compare"><tr><th></th><th>Git</th><th>GitHub</th></tr><tr><td><strong>What</strong></td><td>A program</td><td>A website / company</td></tr><tr><td><strong>Where</strong></td><td>On your computer</td><td>On the internet</td></tr><tr><td><strong>Does</strong></td><td>Tracks changes to files</td><td>Stores projects online, lets people collaborate</td></tr><tr><td><strong>Needs internet?</strong></td><td>No</td><td>Yes</td></tr></table></div><h4>Repository, local &amp; remote</h4><p>A <strong>repository</strong> (“repo”) is a project folder that Git is watching, including its whole history. You will have <strong>two</strong> copies: a <strong>local</strong> repo on your laptop and a <strong>remote</strong> repo on GitHub.</p>
 <div class="diagram" data-diagram="local-remote"></div><h4>Fork vs clone</h4><ul><li><strong>Fork</strong> = make <em>your own copy of someone else’s repo on GitHub</em> (you are not allowed to edit the original directly, but you can edit your fork).</li><li><strong>Clone</strong> = download a repo from GitHub <em>onto your computer</em>.</li></ul><p>We fork first, then clone <em>your fork</em>. Later, a <strong>pull request</strong> asks the owners to take your changes back.</p>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🎯</span>Why it matters</h3>
-<ul><li>🔙 <strong>Undo anything.</strong> Every save point is kept.</li><li>👯 <strong>Work together</strong> without overwriting each other’s files. Hundreds of people can edit one project.</li><li>🧪 <strong>Experiment safely</strong> on branches, then keep only what works.</li><li>💼 <strong>It’s the industry standard.</strong> Nearly every software team uses it, and employers look at GitHub profiles.</li></ul></section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🪜</span>Step by step: fork the workshop repo</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="target"></i></span>Why it matters</h3>
+<ul><li><i class="ic" data-icon="undo"></i> <strong>Undo anything.</strong> Every save point is kept.</li><li><i class="ic" data-icon="users"></i> <strong>Work together</strong> without overwriting each other’s files. Hundreds of people can edit one project.</li><li><i class="ic" data-icon="flask"></i> <strong>Experiment safely</strong> on branches, then keep only what works.</li><li><i class="ic" data-icon="briefcase"></i> <strong>It’s the industry standard.</strong> Nearly every software team uses it, and employers look at GitHub profiles.</li></ul></section>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="list"></i></span>Step by step: fork the workshop repo</h3>
 <ol class="steps">
 <li>Make sure you are signed in to GitHub, and that you typed your username in the box on this page.</li>
-<li><a class="btn btn-primary" data-link="fork" href="#" target="_blank" rel="noopener">🍴 Open the Fork page</a> (opens on GitHub).</li>
+<li><a class="btn btn-primary" data-link="fork" href="#" target="_blank" rel="noopener"><i class="ic" data-icon="git-fork"></i> Open the Fork page</a> (opens on GitHub).</li>
 <li>Under <em>Owner</em>, pick <strong>your own username</strong>. Leave the repository name as it is. Click the green <strong>Create fork</strong> button.</li>
 <li>Wait a few seconds. GitHub takes you to <em>your</em> copy. Look at the top-left: it should say <code class="tpl inline">{{USERNAME}}/{{REPO}}</code> with “forked from …” underneath.</li>
 <li>Copy the address in your browser’s address bar. It should be: <code class="tpl inline">{{FORK_PAGE}}</code>. This is the URL of <em>your fork</em>. You’ll use it in the next mission.</li>
 </ol>
-<div class="callout tip"><span class="callout-title">💡 No terminal in this mission</span><p>Forking happens on the GitHub website. From the next mission on, <strong>every Git operation happens in your terminal</strong>.</p>
+<div class="callout tip"><span class="callout-title"><i class="ic" data-icon="bulb"></i> No terminal in this mission</span><p>Forking happens on the GitHub website. From the next mission on, <strong>every Git operation happens in your terminal</strong>.</p>
 </div>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🛟</span>Common mistakes &amp; troubleshooting</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="life-buoy"></i></span>Common mistakes &amp; troubleshooting</h3>
 <details><summary>The fork page says “You already have a fork”</summary><p>Great, just click to open it. Make sure it’s the fork under <em>your</em> account.</p>
 </details>
 <details><summary>I forked, but the address doesn’t have my username</summary><p>You may be looking at the original repo. Check the URL: it must contain <em>your</em> GitHub username after <code class="inline">github.com/</code>. If not, go back to the fork page and try again.</p>
@@ -206,7 +207,7 @@ Press Enter to open github.com in your browser...
 <details><summary>I can’t see the green “Create fork” button</summary><p>Scroll down on the fork page, and make sure you’re logged in (your avatar should be top-right).</p>
 </details>
 </section>
-<section class="checkpoint"><h3>✅ Success checkpoint</h3>
+<section class="checkpoint"><h3><i class="ic" data-icon="check-circle"></i> Success checkpoint</h3>
 <label class="check"><input type="checkbox"> <span>I can explain in one sentence the difference between Git and GitHub.</span></label>
 <label class="check"><input type="checkbox"> <span>I can explain the difference between fork and clone.</span></label>
 <label class="check"><input type="checkbox"> <span>I have my own fork: the URL has <em>my username</em> in it.</span></label>
@@ -218,15 +219,15 @@ Press Enter to open github.com in your browser...
   <button class="btn btn-primary next-btn" type="button" data-next="m2" disabled>Mission 2 →</button>
 </div>
 </article>
-<article class="mission" id="m2" data-title="Clone Your Repository" data-emoji="📥" aria-labelledby="m2-h">
-<header><div class="kicker">Mission 2 of 5</div><h2 id="m2-h">📥 Clone Your Repository</h2><p class="lead">Bring your fork down to your own computer. About 5 minutes.</p></header>
-<section class="block"><h3><span class="ico" aria-hidden="true">💡</span>What is this?</h3>
+<article class="mission" id="m2" data-title="Clone Your Repository" data-icon="download" aria-labelledby="m2-h">
+<header><div class="kicker">Mission 2 of 5</div><h2 id="m2-h"><i class="ic" data-icon="download"></i> Clone Your Repository</h2><p class="lead">Bring your fork down to your own computer. About 5 minutes.</p></header>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="bulb"></i></span>What is this?</h3>
 <p>Your fork lives on GitHub. To work on it you need a copy <strong>on your computer</strong>. Downloading a repo is called <strong>cloning</strong>. Afterwards you have a real <strong>local repository</strong> that remembers where it came from.</p>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🎯</span>Why it matters</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="target"></i></span>Why it matters</h3>
 <p>All your editing, committing and branching happens in this local copy: fast, offline, and safe. Nothing you do here changes GitHub until you deliberately <em>push</em>.</p>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🪜</span>Step by step</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="list"></i></span>Step by step</h3>
 <ol class="steps">
 <li><strong>Go to your workshop folder</strong> (from Mission 0):<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">cd ~/workshop</code></pre></div>
 </li>
@@ -254,10 +255,11 @@ origin  {{FORK_URL}} (push)</pre></div>
 <p>A <strong>remote</strong> is a copy of the repo somewhere else. <code class="inline">origin</code> is the nickname Git gave to the place you cloned from, <em>your fork</em>. <code class="inline">-v</code> means “verbose” (show the addresses).</p>
 </li>
 </ol>
-<div class="callout info"><span class="callout-title">ℹ️ You now have a local copy of your fork!</span><p>Your laptop → <code class="tpl inline">{{REPO}}</code> folder (local repo) ⇄ GitHub → your fork (<code class="inline">origin</code>). The two are connected, but nothing travels between them until you ask.</p>
+<div class="callout info"><span class="callout-title"><i class="ic" data-icon="info"></i> You now have a local copy of your fork!</span><p>Your laptop → <code class="tpl inline">{{REPO}}</code> folder (local repo) ⇄ GitHub → your fork (<code class="inline">origin</code>). The two are connected, but nothing travels between them until you ask.</p>
 </div>
+<details class="desktop"><summary><i class="ic" data-icon="monitor"></i> Prefer clicking to typing? Do this in GitHub Desktop instead</summary><p class="hint">Same Git underneath, just buttons. Great if the terminal is blocking you. You can still switch to the terminal steps above any time.</p><ol class="steps"><li>In GitHub Desktop choose <strong>File, Clone repository…</strong> and open the <strong>URL</strong> tab.</li><li>Paste your fork address: <code class="tpl inline">{{FORK_PAGE}}</code></li><li>Pick a <strong>local path</strong> such as a <code class="inline">workshop</code> folder in your home directory (avoid OneDrive/iCloud/Dropbox). Click <strong>Clone</strong>.</li><li>If it asks <em>“How are you planning to use this fork?”</em> choose <strong>To contribute to the parent project</strong>.</li><li>You will see the repo name top-left (<strong>Current repository</strong>) and <strong>Current branch: main</strong>. That is your local copy. Clone = <code class="inline">git clone</code>.</li></ol></details>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🛟</span>Common mistakes &amp; troubleshooting</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="life-buoy"></i></span>Common mistakes &amp; troubleshooting</h3>
 <details><summary>“fatal: repository … not found”</summary><p>Your username in the URL is probably wrong, or you didn’t fork yet. Check that <code class="tpl inline">{{FORK_URL}}</code> opens in your browser. Make sure you typed your username in the box on this page.</p>
 </details>
 <details><summary>“fatal: destination path … already exists and is not an empty directory”</summary><p>You already cloned it. Just <code class="inline">cd</code> into the folder, or delete/rename the old folder.</p>
@@ -269,8 +271,8 @@ origin  {{FORK_URL}} (push)</pre></div>
 <details><summary>“Cloning into…” works but I don’t know where the folder went</summary><p>It’s inside the folder you were in when you ran the command. Run <code class="inline">pwd</code> and <code class="inline">ls</code>.</p>
 </details>
 </section>
-<section class="checkpoint"><h3>✅ Success checkpoint</h3>
-<label class="check"><input type="checkbox"> <span><code class="inline">git clone</code> finished without errors.</span></label>
+<section class="checkpoint"><h3><i class="ic" data-icon="check-circle"></i> Success checkpoint</h3>
+<label class="check"><input type="checkbox"> <span><code class="inline">git clone</code> finished without errors. <em>(Desktop: the repo is open in the app.)</em></span></label>
 <label class="check"><input type="checkbox"> <span>I am inside the <code class="tpl inline">{{REPO}}</code> folder (<code class="inline">pwd</code> proves it).</span></label>
 <label class="check"><input type="checkbox"> <span><code class="inline">git status</code> says “working tree clean”.</span></label>
 <label class="check"><input type="checkbox"> <span><code class="inline">git remote -v</code> shows my username in the URL.</span></label>
@@ -282,16 +284,16 @@ origin  {{FORK_URL}} (push)</pre></div>
   <button class="btn btn-primary next-btn" type="button" data-next="m3" disabled>Mission 3 →</button>
 </div>
 </article>
-<article class="mission" id="m3" data-title="Create a Branch &amp; Make Changes" data-emoji="🌿" aria-labelledby="m3-h">
-<header><div class="kicker">Mission 3 of 5</div><h2 id="m3-h">🌿 Create a Branch &amp; Make Changes</h2><p class="lead">Create your profile, then stage and commit it. About 15 minutes.</p></header>
-<section class="block"><h3><span class="ico" aria-hidden="true">💡</span>What is this?</h3>
+<article class="mission" id="m3" data-title="Create a Branch &amp; Make Changes" data-icon="git-branch" aria-labelledby="m3-h">
+<header><div class="kicker">Mission 3 of 5</div><h2 id="m3-h"><i class="ic" data-icon="git-branch"></i> Create a Branch &amp; Make Changes</h2><p class="lead">Create your profile, then stage and commit it. About 15 minutes.</p></header>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="bulb"></i></span>What is this?</h3>
 <p>A <strong>branch</strong> is a safe side-road where you can make changes without touching the main version. When you’re happy, you ask to merge it back.</p>
-<div class="analogy"><div class="big">📝</div><div><strong>Analogy:</strong> Imagine a shared Google Doc. Instead of typing in the original, you make a <em>copy</em>, write your changes there, and send it to the owner saying “please add this”. That’s a branch + pull request.</div></div><div class="diagram" data-diagram="branches"></div><p>Then you’ll learn the three places a change travels through before it’s saved:</p>
+<div class="analogy"><div class="big"><i class="ic" data-icon="file"></i></div><div><strong>Analogy:</strong> Imagine a shared Google Doc. Instead of typing in the original, you make a <em>copy</em>, write your changes there, and send it to the owner saying “please add this”. That’s a branch + pull request.</div></div><div class="diagram" data-diagram="branches"></div><p>Then you’ll learn the three places a change travels through before it’s saved:</p>
 <div class="diagram" data-diagram="areas"></div><ul><li><strong>Working directory</strong>: the normal files on your computer. Edit them freely.</li><li><strong>Staging area</strong>: a waiting room where you choose <em>which</em> changes go into the next save.</li><li><strong>Commit</strong>: a permanent snapshot with a <strong>message</strong> describing it. Commits make up your <strong>local history</strong>.</li></ul></section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🎯</span>Why it matters</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="target"></i></span>Why it matters</h3>
 <p>Branches keep <code class="inline">main</code> clean and let many people work in parallel. Staging + commits let you save <em>meaningful</em> steps (“Add my profile”) instead of one giant blob. This add → commit loop is what you’ll do thousands of times in your career.</p>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🪜</span>Step by step</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="list"></i></span>Step by step</h3>
 <ol class="steps">
 <li><strong>Make sure you’re in the project folder</strong> (<code class="inline">pwd</code> ends with <code class="tpl inline">{{REPO}}</code>), then create your branch:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git switch -c add-my-profile</code></pre></div>
 <div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre>Switched to a new branch 'add-my-profile'</pre></div>
@@ -300,7 +302,7 @@ origin  {{FORK_URL}} (push)</pre></div>
 <li><strong>Create your profile file</strong> by copying the sample. The filename must be <strong>your GitHub username + .json</strong>:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">cp participants/sample.json participants/{{USERNAME}}.json</code></pre></div>
 <div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">ls participants</code></pre></div>
 <div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre class="tpl">{{USERNAME}}.json    sample.json</pre></div>
-<div class="callout warn"><span class="callout-title">⚠️ Don’t edit sample.json</span><p>It’s the shared template. Only change <em>your</em> file, named after you.</p>
+<div class="callout warn"><span class="callout-title"><i class="ic" data-icon="alert"></i> Don’t edit sample.json</span><p>It’s the shared template. Only change <em>your</em> file, named after you.</p>
 </div>
 </li>
 <li><strong>Edit your file.</strong> Open it with whichever option works for you:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Option A · VS Code (any system)</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">code participants/{{USERNAME}}.json</code></pre></div>
@@ -319,7 +321,7 @@ origin  {{FORK_URL}} (push)</pre></div>
   "name": "Alex",
   "emoji": "🚀",
   "fact": "I love building robots!"
-}</code></pre></div><p><strong>Rules:</strong> name ≤ 30 characters · exactly one emoji works best · fact ≤ 140 characters · no &lt; or &gt; characters · <strong>nicknames, not personal info</strong> (this will be public!). Save the file when done.</p><div class="callout tip"><span class="callout-title">💡 Emoji shortcut</span><p><strong>macOS</strong>: <kbd>Ctrl</kbd>+<kbd>⌘</kbd>+<kbd>Space</kbd> · <strong>Windows</strong>: <kbd>Win</kbd>+<kbd>.</kbd> · <strong>Linux</strong>: copy one from <a href="https://emojipedia.org" target="_blank" rel="noopener">emojipedia.org</a>. Terminal editors can be fussy with emoji; if so, use VS Code.</p>
+}</code></pre></div><p><strong>Rules:</strong> name ≤ 30 characters · exactly one emoji works best · fact ≤ 140 characters · no &lt; or &gt; characters · <strong>nicknames, not personal info</strong> (this will be public!). Save the file when done.</p><div class="callout tip"><span class="callout-title"><i class="ic" data-icon="bulb"></i> Emoji shortcut</span><p><strong>macOS</strong>: <kbd>Ctrl</kbd>+<kbd>⌘</kbd>+<kbd>Space</kbd> · <strong>Windows</strong>: <kbd>Win</kbd>+<kbd>.</kbd> · <strong>Linux</strong>: copy one from <a href="https://emojipedia.org" target="_blank" rel="noopener">emojipedia.org</a>. Terminal editors can be fussy with emoji; if so, use VS Code.</p>
 </div>
 </li>
 <li><strong>Ask Git what it sees:</strong><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git status</code></pre></div>
@@ -354,14 +356,15 @@ Date:   Tue Nov 3 10:42:17 2026 +0800
 <p><code class="inline">git log -1</code> = “show the latest <code class="inline">1</code> commit”. That’s your <strong>local history</strong>. The long code is the commit’s unique ID. This commit exists only on your laptop for now.</p>
 </li>
 </ol>
+<details class="desktop"><summary><i class="ic" data-icon="monitor"></i> Prefer clicking to typing? Do this in GitHub Desktop instead</summary><p class="hint">Same Git underneath, just buttons. Great if the terminal is blocking you. You can still switch to the terminal steps above any time.</p><ol class="steps"><li><strong>Create the branch:</strong> click <strong>Current Branch</strong> (top), then <strong>New Branch</strong>, name it <code class="inline">add-my-profile</code>, and click <strong>Create Branch</strong>. (= <code class="inline">git switch -c</code>)</li><li><strong>Create your file:</strong> menu <strong>Repository, Show in Finder</strong> (Windows: <em>Show in Explorer</em>). Open the <code class="inline">participants</code> folder, <strong>copy</strong> <code class="inline">sample.json</code> and rename the copy to <code class="tpl inline">{{USERNAME}}.json</code>.</li><li><strong>Edit it</strong> with VS Code or Notepad (on a Mac avoid TextEdit: it turns quotes into curly ones that break JSON). Use the format shown in the terminal steps above and save.</li><li>Back in GitHub Desktop, open the <strong>Changes</strong> tab: your file is listed with a ticked box. The tick is the <strong>staging area</strong> (= <code class="inline">git add</code>).</li><li><strong>Commit:</strong> bottom-left, type <code class="inline">Add my profile</code> in <em>Summary</em> and click <strong>Commit to add-my-profile</strong>. (= <code class="inline">git commit -m</code>)</li><li>Open the <strong>History</strong> tab: your commit is the top entry. (= <code class="inline">git log</code>)</li></ol></details>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🧪</span>Optional: check your JSON first</h3><p>If you have Node.js installed, you can run the same check the pull request will run:</p><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">node scripts/validate-participants.js</code></pre></div>
-<div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre class="tpl">✅ {{USERNAME}}.json
-✅ sample.json
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="flask"></i></span>Optional: check your JSON first</h3><p>If you have Node.js installed, you can run the same check the pull request will run:</p><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">node scripts/validate-participants.js</code></pre></div>
+<div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre class="tpl">PASS {{USERNAME}}.json
+PASS sample.json
 
 2/2 file(s) valid.</pre></div>
 <p class="hint">No Node? No problem. The pull request in Mission 5 runs this check for you automatically, and VS Code underlines JSON mistakes in red.</p></section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🛟</span>Common mistakes &amp; troubleshooting</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="life-buoy"></i></span>Common mistakes &amp; troubleshooting</h3>
 <details><summary>“fatal: not a git repository”</summary><p>You’re not inside the project folder. Run <code class="tpl inline">cd ~/workshop/{{REPO}}</code> and try again.</p>
 </details>
 <details><summary>“cp: cannot stat” / “Cannot find path” when copying</summary><p>Run <code class="inline">ls participants</code>. You should see <code class="inline">sample.json</code>. If <code class="inline">participants</code> isn’t found, you’re in the wrong folder (<code class="inline">pwd</code>).</p>
@@ -377,10 +380,10 @@ Date:   Tue Nov 3 10:42:17 2026 +0800
 <details><summary>Windows: the file got saved as <code class="inline">alex.json.txt</code></summary><p>Use <code class="inline">cp</code> and open the file with the commands above, don’t “Save As” in Notepad. Rename the file with <code class="inline">mv participants/alex.json.txt participants/alex.json</code> (PowerShell: <code class="inline">ren</code> works too).</p>
 </details>
 </section>
-<section class="checkpoint"><h3>✅ Success checkpoint</h3>
+<section class="checkpoint"><h3><i class="ic" data-icon="check-circle"></i> Success checkpoint</h3>
 <label class="check"><input type="checkbox"> <span><code class="inline">git switch -c add-my-profile</code> worked.</span></label>
 <label class="check"><input type="checkbox"> <span>I created <code class="tpl inline">participants/{{USERNAME}}.json</code> with my own name, emoji and fun fact.</span></label>
-<label class="check"><input type="checkbox"> <span><code class="inline">git status</code> showed my file as a new file to be committed.</span></label>
+<label class="check"><input type="checkbox"> <span><code class="inline">git status</code> showed my file as a new file to be committed. <em>(Desktop: it is under Changes.)</em></span></label>
 <label class="check"><input type="checkbox"> <span><code class="inline">git log -1</code> shows my “Add my profile” commit.</span></label>
 </section>
 
@@ -390,15 +393,15 @@ Date:   Tue Nov 3 10:42:17 2026 +0800
   <button class="btn btn-primary next-btn" type="button" data-next="m4" disabled>Mission 4 →</button>
 </div>
 </article>
-<article class="mission" id="m4" data-title="Push to GitHub" data-emoji="🚀" aria-labelledby="m4-h">
-<header><div class="kicker">Mission 4 of 5</div><h2 id="m4-h">🚀 Push to GitHub</h2><p class="lead">Send your commit up to your fork. About 5 minutes.</p></header>
-<section class="block"><h3><span class="ico" aria-hidden="true">💡</span>What is this?</h3>
+<article class="mission" id="m4" data-title="Push to GitHub" data-icon="upload" aria-labelledby="m4-h">
+<header><div class="kicker">Mission 4 of 5</div><h2 id="m4-h"><i class="ic" data-icon="upload"></i> Push to GitHub</h2><p class="lead">Send your commit up to your fork. About 5 minutes.</p></header>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="bulb"></i></span>What is this?</h3>
 <p>So far your commit lives only on your laptop. <strong>Pushing</strong> uploads your branch’s commits to the remote repository, <em>your fork on GitHub</em>.</p>
 <div class="diagram" data-diagram="areas"></div><ul><li><strong>Remote</strong>: a copy of the repo on another computer (here: GitHub).</li><li><strong>origin</strong>: the nickname for your fork’s address (you saw it in <code class="inline">git remote -v</code>).</li><li><strong>Push</strong>: send commits from local → remote.</li><li><strong>Upstream tracking</strong> (<code class="inline">-u</code>): tells Git “my local <code class="inline">add-my-profile</code> is linked to <code class="inline">origin/add-my-profile</code>”, so later you can just type <code class="inline">git push</code> or <code class="inline">git pull</code>.</li><li><strong>Local vs remote branch</strong>: your local branch <code class="inline">add-my-profile</code> and the one on GitHub <code class="inline">origin/add-my-profile</code> are two separate things that you keep in sync.</li></ul></section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🎯</span>Why it matters</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="target"></i></span>Why it matters</h3>
 <p>Pushing is how your work leaves your laptop: it backs it up and makes it possible for a pull request. It’s also the moment GitHub checks that you’re allowed to write to that repo.</p>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🪜</span>Step by step</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="list"></i></span>Step by step</h3>
 <ol class="steps">
 <li><strong>Push your branch:</strong><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git push -u origin add-my-profile</code></pre></div>
 <div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre class="tpl">Enumerating objects: 5, done.
@@ -411,7 +414,7 @@ To https://github.com/{{USERNAME}}/{{REPO}}.git
  * [new branch]      add-my-profile -&gt; add-my-profile
 branch 'add-my-profile' set up to track 'origin/add-my-profile'.</pre></div>
 <p>Read it as: <code class="inline">git push</code> <em>send</em> · <code class="inline">-u</code> <em>and remember the link</em> · <code class="inline">origin</code> <em>to my fork</em> · <code class="inline">add-my-profile</code> <em>this branch</em>.</p>
-<div class="callout info"><span class="callout-title">ℹ️ First push? A login may appear</span><p>If you used <code class="inline">gh auth login</code> it should just work. With Git Credential Manager (Windows) a browser window may open: sign in and approve. If Git asks for a “password”, <strong>don’t type your GitHub password</strong>; see the troubleshooting below.</p>
+<div class="callout info"><span class="callout-title"><i class="ic" data-icon="info"></i> First push? A login may appear</span><p>If you used <code class="inline">gh auth login</code> it should just work. With Git Credential Manager (Windows) a browser window may open: sign in and approve. If Git asks for a “password”, <strong>don’t type your GitHub password</strong>; see the troubleshooting below.</p>
 </div>
 </li>
 <li><strong>Check your tracking link locally:</strong><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git branch -vv</code></pre></div>
@@ -419,10 +422,11 @@ branch 'add-my-profile' set up to track 'origin/add-my-profile'.</pre></div>
   main              a1b2c3d [origin/main] Update README</pre></div>
 <p><code class="inline">[origin/add-my-profile]</code> shows your local branch is linked to its remote twin.</p>
 </li>
-<li><strong>Verify on GitHub:</strong> <a class="btn" data-link="mybranches" href="#" target="_blank" rel="noopener">🌿 Open my fork’s branches</a> You should see <code class="inline">add-my-profile</code> listed. Click it, open the <code class="inline">participants</code> folder, and find your JSON file. 🎉</li>
+<li><strong>Verify on GitHub:</strong> <a class="btn" data-link="mybranches" href="#" target="_blank" rel="noopener"><i class="ic" data-icon="git-branch"></i> Open my fork’s branches</a> You should see <code class="inline">add-my-profile</code> listed. Click it, open the <code class="inline">participants</code> folder, and find your JSON file. </li>
 </ol>
+<details class="desktop"><summary><i class="ic" data-icon="monitor"></i> Prefer clicking to typing? Do this in GitHub Desktop instead</summary><p class="hint">Same Git underneath, just buttons. Great if the terminal is blocking you. You can still switch to the terminal steps above any time.</p><ol class="steps"><li>Click the blue <strong>Publish branch</strong> button at the top. (= <code class="inline">git push -u origin add-my-profile</code>)</li><li>If a sign-in window appears, sign in with your GitHub account. The button changes to <strong>Fetch origin</strong>, which means your branch is on GitHub.</li><li>Verify with the <strong>Open my fork’s branches</strong> button above.</li></ol></details>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🛟</span>Common mistakes &amp; troubleshooting</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="life-buoy"></i></span>Common mistakes &amp; troubleshooting</h3>
 <details><summary>It asks for my “Username” and “Password”</summary><p>GitHub no longer accepts passwords here. Quit with <kbd>Ctrl</kbd>+<kbd>C</kbd> and run <code class="inline">gh auth login</code> (Mission 0). Fallback: type your username, and for the password paste a <strong>Personal Access Token</strong> (GitHub → Settings → Developer settings → Tokens, with write access to <em>Contents</em>).</p>
 </details>
 <details><summary>“remote: Permission to … denied” / “fatal: unable to access … 403”</summary><p>You’re probably pushing to the <em>original</em> repo instead of your fork. Run <code class="inline">git remote -v</code>: the URL must contain <strong>your</strong> username. If it doesn’t, re-clone from your fork. Or you are logged in as a different GitHub account (<code class="inline">gh auth status</code>).</p>
@@ -438,7 +442,7 @@ branch 'add-my-profile' set up to track 'origin/add-my-profile'.</pre></div>
 <details><summary>The push seems frozen</summary><p>Look for a browser window or a prompt waiting for you. If it’s truly stuck, <kbd>Ctrl</kbd>+<kbd>C</kbd> and try again.</p>
 </details>
 </section>
-<section class="checkpoint"><h3>✅ Success checkpoint</h3>
+<section class="checkpoint"><h3><i class="ic" data-icon="check-circle"></i> Success checkpoint</h3>
 <label class="check"><input type="checkbox"> <span>The push finished and printed <code class="inline">[new branch] add-my-profile -> add-my-profile</code>.</span></label>
 <label class="check"><input type="checkbox"> <span><code class="inline">git branch -vv</code> shows <code class="inline">[origin/add-my-profile]</code>.</span></label>
 <label class="check"><input type="checkbox"> <span>I can see my branch and my JSON file on my fork on GitHub.</span></label>
@@ -450,35 +454,36 @@ branch 'add-my-profile' set up to track 'origin/add-my-profile'.</pre></div>
   <button class="btn btn-primary next-btn" type="button" data-next="m5" disabled>Mission 5 →</button>
 </div>
 </article>
-<article class="mission" id="m5" data-title="Open a Pull Request &amp; Go Live" data-emoji="🎉" aria-labelledby="m5-h">
-<header><div class="kicker">Mission 5 of 5</div><h2 id="m5-h">🎉 Open a Pull Request &amp; Go Live</h2><p class="lead">Ask to join the wall, and watch it appear. About 10 minutes.</p></header>
-<section class="block"><h3><span class="ico" aria-hidden="true">💡</span>What is this?</h3>
+<article class="mission" id="m5" data-title="Open a Pull Request &amp; Go Live" data-icon="git-pull-request" aria-labelledby="m5-h">
+<header><div class="kicker">Mission 5 of 5</div><h2 id="m5-h"><i class="ic" data-icon="git-pull-request"></i> Open a Pull Request &amp; Go Live</h2><p class="lead">Ask to join the wall, and watch it appear. About 10 minutes.</p></header>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="bulb"></i></span>What is this?</h3>
 <p>Your changes are on <em>your</em> fork. A <strong>pull request</strong> (PR) is a polite message to the original project: <em>“I made some changes. Would you like to pull them in?”</em></p>
-<div class="diagram" data-diagram="flow"></div><ul><li><strong>Pull request</strong>: a proposal to merge your branch into someone else’s repo.</li><li><strong>Code review</strong>: a person (here, a facilitator) looks at what you changed and approves or asks for tweaks. Tests run automatically, too.</li><li><strong>Merge</strong>: your commit becomes part of the official project. 🎉</li></ul></section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🎯</span>Why it matters</h3>
+<div class="diagram" data-diagram="flow"></div><ul><li><strong>Pull request</strong>: a proposal to merge your branch into someone else’s repo.</li><li><strong>Code review</strong>: a person (here, a facilitator) looks at what you changed and approves or asks for tweaks. Tests run automatically, too.</li><li><strong>Merge</strong>: your commit becomes part of the official project. </li></ul></section>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="target"></i></span>Why it matters</h3>
 <p>This is how nearly all open-source (and most professional) software is built. Nobody pushes straight to the shared project; everyone proposes changes, and teammates review them. You’re about to do exactly that.</p>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🪜</span>Step by step</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="list"></i></span>Step by step</h3>
 <ol class="steps">
-<li><strong>Open the pull request page:</strong> <a class="btn btn-primary" data-link="compare" href="#" target="_blank" rel="noopener">🔀 Start my pull request</a><br><span class="hint">(Or open your fork and click the yellow <em>“Compare &amp; pull request”</em> banner.)</span></li>
+<li><strong>Open the pull request page:</strong> <a class="btn btn-primary" data-link="compare" href="#" target="_blank" rel="noopener"><i class="ic" data-icon="git-pull-request"></i> Start my pull request</a><br><span class="hint">(Or open your fork and click the yellow <em>“Compare &amp; pull request”</em> banner.)</span></li>
 <li><strong>Check the direction at the top.</strong> It should read: <em>base repository</em>: <code class="tpl inline">{{OWNER}}/{{REPO}}</code> · base: <code class="inline">main</code> ← <em>head repository</em>: <code class="tpl inline">{{USERNAME}}/{{REPO}}</code> · compare: <code class="inline">add-my-profile</code>.</li>
 <li><strong>Write a short title and description.</strong> A template appears. Fill in your username and tick the boxes. Example title: <code class="inline">Add Alex’s profile</code>. Add a friendly sentence, e.g. “Hi! I’m new to Git. This adds my fun fact.”</li>
-<li><strong>Click “Create pull request”.</strong> 🎊 You’ve opened a PR! Scroll down to see the <em>Files changed</em> tab: it shows exactly your one new file.</li>
-<li><strong>Wait for the checks and a review.</strong> An automatic check validates your JSON (a green ✅ is good; a red ❌ explains what to fix). A facilitator will review and click <strong>Merge</strong>. Put up your hand or watch for the purple “Merged” label.</li>
-<li><strong>Wait ~1–3 minutes</strong> after the merge. GitHub rebuilds the website. Then open the Community Wall and press <kbd>↻ Refresh</kbd>: <a class="btn btn-hot" href="index.html#wall">🧱 Go to the Wall</a></li>
-<li><strong>Find your card!</strong> If you typed your username into the box on this page, your card will say <em>“That’s you! 🎉”</em>.</li>
+<li><strong>Click “Create pull request”.</strong> You’ve opened a PR! Scroll down to see the <em>Files changed</em> tab: it shows exactly your one new file.</li>
+<li><strong>Wait for the checks and a review.</strong> An automatic check validates your JSON (a green <i class="ic" data-icon="check-circle"></i> is good; a red <i class="ic" data-icon="x-circle"></i> explains what to fix). A facilitator will review and click <strong>Merge</strong>. Put up your hand or watch for the purple “Merged” label.</li>
+<li><strong>Wait ~1–3 minutes</strong> after the merge. GitHub rebuilds the website. Then open the Community Wall and press <kbd><i class="ic" data-icon="refresh"></i> Refresh</kbd>: <a class="btn btn-hot" href="index.html#wall"><i class="ic" data-icon="grid"></i> Go to the Wall</a></li>
+<li><strong>Find your card!</strong> If you typed your username into the box on this page, your card will say <em>“That’s you! ”</em>.</li>
 </ol>
-<div class="callout warn"><span class="callout-title">⚠️ Merged but not on the wall yet?</span><p>Be patient: GitHub Pages needs a minute or two to publish. Hard-refresh with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> (<kbd>⌘</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> on Mac). Still nothing after 5 minutes? Ask a facilitator to check the <em>Actions</em> tab.</p>
+<div class="callout warn"><span class="callout-title"><i class="ic" data-icon="alert"></i> Merged but not on the wall yet?</span><p>Be patient: GitHub Pages needs a minute or two to publish. Hard-refresh with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> (<kbd>⌘</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> on Mac). Still nothing after 5 minutes? Ask a facilitator to check the <em>Actions</em> tab.</p>
 </div>
-<div class="callout info"><span class="callout-title">ℹ️ Need to change something after opening the PR?</span><p>Just edit your file locally, then run <code class="inline">git add</code>, <code class="inline">git commit</code> and <code class="inline">git push</code> again (the last one needs no extras). The PR updates itself!</p>
+<div class="callout info"><span class="callout-title"><i class="ic" data-icon="info"></i> Need to change something after opening the PR?</span><p>Just edit your file locally, then run <code class="inline">git add</code>, <code class="inline">git commit</code> and <code class="inline">git push</code> again (the last one needs no extras). The PR updates itself!</p>
 </div>
+<details class="desktop"><summary><i class="ic" data-icon="monitor"></i> Prefer clicking to typing? Do this in GitHub Desktop instead</summary><p class="hint">Same Git underneath, just buttons. Great if the terminal is blocking you. You can still switch to the terminal steps above any time.</p><p>In GitHub Desktop, after publishing, click <strong>Create Pull Request</strong> (at the top, or under <em>Branch, Create Pull Request</em>). It opens the same GitHub page in your browser; then follow steps 2–7 above. Check the <em>base repository</em> is the original workshop repo, not your fork.</p><p>Need to change your file later? Edit it, commit in the <strong>Changes</strong> tab, then click <strong>Push origin</strong>.</p></details>
 </section>
-<section class="block"><h3><span class="ico" aria-hidden="true">🛟</span>Common mistakes &amp; troubleshooting</h3>
+<section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="life-buoy"></i></span>Common mistakes &amp; troubleshooting</h3>
 <details><summary>The base repository is my own fork</summary><p>Click the <em>base repository</em> drop-down and choose the <strong>original</strong> workshop repo (<code class="tpl inline">{{OWNER}}/{{REPO}}</code>). Otherwise you’d be sending the PR to yourself.</p>
 </details>
 <details><summary>I don’t see “Compare &amp; pull request”</summary><p>Use the blue button above, or on your fork choose <em>Contribute → Open pull request</em>.</p>
 </details>
-<details><summary>The check failed with a red ❌</summary><p>Click <em>Details</em> to read the message. Usually it’s a JSON typo (missing comma/quote) or a wrong filename. Fix the file locally, <code class="inline">git add</code> → <code class="inline">git commit -m "Fix profile"</code> → <code class="inline">git push</code>.</p>
+<details><summary>The check failed with a red <i class="ic" data-icon="x-circle"></i></summary><p>Click <em>Details</em> to read the message. Usually it’s a JSON typo (missing comma/quote) or a wrong filename. Fix the file locally, <code class="inline">git add</code> → <code class="inline">git commit -m "Fix profile"</code> → <code class="inline">git push</code>.</p>
 </details>
 <details><summary>The check says “Waiting for approval” / “Approve and run”</summary><p>GitHub holds workflows from first-time contributors. A facilitator will approve it; you don’t need to do anything.</p>
 </details>
@@ -487,9 +492,9 @@ branch 'add-my-profile' set up to track 'origin/add-my-profile'.</pre></div>
 <details><summary>I opened two pull requests by mistake</summary><p>No harm done. Click “Close pull request” on the extra one.</p>
 </details>
 </section>
-<section class="checkpoint"><h3>✅ Success checkpoint</h3>
+<section class="checkpoint"><h3><i class="ic" data-icon="check-circle"></i> Success checkpoint</h3>
 <label class="check"><input type="checkbox"> <span>I opened a pull request to the <strong>original</strong> workshop repo.</span></label>
-<label class="check"><input type="checkbox"> <span>The automatic check turned green ✅ (or a facilitator approved it).</span></label>
+<label class="check"><input type="checkbox"> <span>The automatic check turned green <i class="ic" data-icon="check-circle"></i> (or a facilitator approved it).</span></label>
 <label class="check"><input type="checkbox"> <span>A facilitator merged my PR.</span></label>
 <label class="check"><input type="checkbox"> <span>I found my own card on the Community Wall.</span></label>
 <p class="hint">Still waiting for your merge? Hang tight; try a <a href="resources.html#bonus">bonus challenge</a> in the meantime!</p></section>
@@ -500,10 +505,10 @@ branch 'add-my-profile' set up to track 'origin/add-my-profile'.</pre></div>
   <button class="btn btn-primary next-btn" type="button" data-next="done" disabled>Finish →</button>
 </div>
 </article>
-<article class="mission done-screen" id="done" data-title="Celebrate!" data-emoji="🏆" data-special="1">
-<div class="big-emoji">🏆</div>
+<article class="mission done-screen" id="done" data-title="Celebrate!" data-icon="trophy" data-special="1">
+<div class="big-emoji"><i class="ic" data-icon="trophy"></i></div>
 <h2>You did it! You’re an open-source contributor.</h2>
-<p class="lead">You just did what developers do every day, entirely from the terminal. Seriously, well done. 🎉</p>
+<p class="lead">You just did what developers do every day, entirely from the terminal. Seriously, well done. </p>
 <h3>What you learned</h3>
 <ul class="learned">
 <li>What a terminal is, and <code class="inline">pwd</code>, <code class="inline">ls</code>, <code class="inline">cd</code></li>
@@ -515,12 +520,12 @@ branch 'add-my-profile' set up to track 'origin/add-my-profile'.</pre></div>
 <li>Pull requests, code review and merging</li>
 </ul>
 <div class="cta-row" style="justify-content:center">
-  <a class="btn btn-primary btn-lg" href="index.html#wall">🧱 Visit the Wall</a>
-  <a class="btn btn-lg" href="resources.html#bonus">🎯 Try bonus challenges</a>
-  <a class="btn btn-lg" href="materials/git-cheatsheet.html" target="_blank" rel="noopener">🖨 Cheat sheet</a>
+  <a class="btn btn-primary btn-lg" href="index.html#wall"><i class="ic" data-icon="grid"></i> Visit the Wall</a>
+  <a class="btn btn-lg" href="resources.html#bonus"><i class="ic" data-icon="target"></i> Try bonus challenges</a>
+  <a class="btn btn-lg" href="materials/git-cheatsheet.html" target="_blank" rel="noopener"><i class="ic" data-icon="printer"></i> Cheat sheet</a>
 </div>
 <div class="callout tip" style="text-align:left;margin-top:30px"><span class="callout-title">What next?</span><p>Make a small change to a project you care about: fix a typo in a README on any open-source project, or start your own repo with <code class="inline">git init</code>. Every expert started with a first pull request just like this one.</p></div>
-<p><button class="btn" type="button" id="restart-btn">↺ Back to Mission 0</button></p>
+<p><button class="btn" type="button" id="restart-btn"><i class="ic" data-icon="undo"></i> Back to Mission 0</button></p>
 </article>
 </div>
 </div>
@@ -528,16 +533,18 @@ branch 'add-my-profile' set up to track 'origin/add-my-profile'.</pre></div>
 </main>
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div><strong>GitHub Playground</strong><br>Your first open-source contribution 🚀</div>
+    <div><strong>GitHub Playground</strong><br>Your first open-source contribution <i class="ic" data-icon="rocket"></i></div>
     <div>
       <a data-link="upstream" href="#" target="_blank" rel="noopener">Workshop repository</a> ·
       <a href="resources.html">Cheat sheet</a> ·
-      <a href="materials/git-cheatsheet.html">Printable cheat sheet</a>
+      <a href="materials/git-cheatsheet.html">Printable cheat sheet</a> ·
+      <a href="materials/qr.html">QR code</a>
     </div>
     <div style="color:#b9b4d8">Everything you submit is public. Use a nickname, not personal info.</div>
   </div>
 </footer>
 <script src="js/config.js"></script>
+<script src="js/icons.js"></script>
 <script src="js/diagrams.js"></script>
 <script src="js/app.js"></script>
 <script src="js/guide.js"></script>

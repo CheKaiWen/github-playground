@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-03T02:43:39.155Z",
+  "generatedAt": "2026-11-03T02:56:59.896Z",
   "count": 1,
   "participants": [
     {
-      "id": "sample",
-      "name": "Sample Student",
-      "emoji": "🎓",
-      "fact": "I'm the example profile - copy me to make your own!"
+      "id": "kimiyangg",
+      "name": "Kimi",
+      "emoji": "🧑‍💻",
+      "fact": "I organised this workshop. Ask me anything about Git!"
     }
   ]
 }

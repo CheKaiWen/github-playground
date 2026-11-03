@@ -49,7 +49,7 @@ git push -u origin main
 4. The site detects `OWNER` and the repo name from its own URL, so there is **nothing to configure**. Only edit `js/config.js` for a custom domain or non-standard setup.
 5. The workflow validates nothing at deploy time on purpose; invalid files are *skipped* (with a warning in the log), so one bad file can never take the wall down.
 
-> **Pages lag:** after each merge, the deploy takes ~1–3 minutes. Tell people to wait and press ↻ Refresh on the wall.
+> **Pages lag:** after each merge, the deploy takes ~1–3 minutes. Tell people to wait and press Refresh on the wall.
 
 **If you must use “Deploy from a branch” instead:** the generated `data/participants.json` in the repo is only a seed. Run `npm run build` and commit the result before the event and again after merging. Not recommended.
 
@@ -79,10 +79,9 @@ Tip: don’t lecture. Put the **Wall on the projector** and let it fill up. It�
 
 1. Exactly **one** file, `participants/<something>.json`.
 2. Content is friendly and doesn’t contain personal info (full name + phone, email, student ID, address…). If it does, comment and ask them to change it (they just edit & push again), or edit nothing and close the PR.
-3. Check ✅ is green (if it says *waiting for approval*, click **Approve and run workflows**).
+3. Check is green (if it says *waiting for approval*, click **Approve and run workflows**).
 
-Then click **Squash and merge** (or *Merge*; either is fine) → Confirm. Say “merged!” out loud. 🎉
-
+Then click **Squash and merge** (or *Merge*; either is fine) → Confirm. Say “merged!” out loud. 
 **Bulk merge** (many PRs at once). Requires the GitHub CLI logged in as a maintainer. This script merges only PRs whose changed files are all `participants/*.json`, and skips the rest for manual review:
 
 ```bash
@@ -120,7 +119,7 @@ done
 | `src refspec … does not match any` | No commit yet or wrong branch name → `git branch`, `git log -1`. |
 | Stuck in Vim | `Esc`, `:q!`, Enter. Redo with `-m`. |
 | Invisible/empty commit | File saved outside the repo folder or never saved → `git status`. |
-| JSON check red ❌ | Missing comma/quote, wrong filename, extra file. The PR *Checks → Details* shows the sentence-level message. |
+| JSON check red | Missing comma/quote, wrong filename, extra file. The PR *Checks → Details* shows the sentence-level message. |
 | Cards missing after merge | Wait for deploy (§3). Actions tab, hard-refresh. |
 | `rejected … fetch first` | They pushed from elsewhere → `git pull` then `git push`. |
 | `LF will be replaced by CRLF` warning (Windows) | Harmless; ignore. |
@@ -136,6 +135,20 @@ done
 | Gotchas | Old Macs may lack Homebrew → use the `gh` installer | Run PowerShell as normal user (not admin). Cloud-synced `Documents` (OneDrive) → guide uses `~/workshop`. `ls`, `cd`, `pwd`, `cp` work in PowerShell. Execution-policy warnings don’t matter here. | Distros differ; `sudo` password prompts show no characters. |
 
 Chromebooks: use the Linux (Crostini) terminal, or have them pair up. Tablets/phones can’t do this workshop → pair them.
+
+## 9b. GitHub Desktop (for people who refuse the terminal)
+
+Each mission has a collapsed **“Prefer clicking to typing? Do this in GitHub Desktop”** box. macOS/Windows only (Linux → terminal). It covers sign-in, clone, branch, edit/commit, publish, and PR. The terminal remains the default and the recommended path (it's the point of the workshop); offer Desktop to people who are blocked, then nudge them to try `git status` / `git log` in the terminal afterwards.
+
+| Desktop | Terminal |
+|---|---|
+| File → Clone repository | `git clone` |
+| Current Branch → New Branch | `git switch -c` |
+| Ticked file in Changes | `git add` |
+| Commit to <branch> | `git commit -m` |
+| History tab | `git log` |
+| Publish branch / Push origin | `git push -u origin` / `git push` |
+| Create Pull Request | opens the PR page on github.com |
 
 ## 10. Troubleshooting authentication (the #1 time sink)
 
@@ -175,7 +188,7 @@ Work through in order:
 Do this with a **second GitHub account** and a **fresh folder**, ideally on a machine that mimics participants (and once on Windows if possible):
 
 - [ ] Site loads on Pages URL (Home, Learn, Resources, cheatsheet, `materials/qr.html`).
-- [ ] Home page: Community Wall shows the sample card; ↻ Refresh works.
+- [ ] Home page: Community Wall shows the facilitator card (`participants/kimiyangg.json`); Refresh works.
 - [ ] Learn page: pick each OS tab; copy buttons work; progress saves after reload.
 - [ ] Enter test username; commands show it; *Fork* link opens `…/OWNER/github-playground/fork`.
 - [ ] Mission 0: `git --version`, config, `gh auth login`, `gh auth status`.
@@ -188,10 +201,10 @@ Do this with a **second GitHub account** and a **fresh folder**, ideally on a ma
 - [ ] Merge as the maintainer. Deploy turns green in Actions. Card appears on the wall (note how long it took).
 - [ ] Test a bonus (`git pull upstream main`) to confirm the upstream URL is correct.
 - [ ] **Clean up:** delete the test profile file from `participants/` (commit to `main`) so the wall starts fresh; close the test PR; delete the test fork.
-- [ ] Remove `participants/sample.json`? **No.** The guide copies it. Keep it. (It appears on the wall as “Sample Student”; fine.)
+- [ ] Keep `participants/sample.json`: the guide copies it as the template. It is validated but never shown on the wall (the build skips it).
 
 ## 14. After the event
 
 - Keep the site up; the Wall is a nice memento. Share the URL with participants.
-- If you want a clean slate for the next run: delete everything in `participants/` except `sample.json`, commit.
-- Consider asking participants to ⭐ the repo and follow you for the next workshop.
+- If you want a clean slate for the next run: delete everything in `participants/` except `sample.json` (and your own profile if you want to keep it), commit.
+- Consider asking participants to the repo and follow you for the next workshop.
