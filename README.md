@@ -50,7 +50,7 @@ A participant file looks like:
 { "name": "Alex", "emoji": "", "fact": "I love building robots!" }
 ```
 
-Rules (enforced by `scripts/validate-participants.js`): file name = username + `.json`; exactly the fields `name` (≤30), `emoji` (≤16 chars, must contain an emoji), `fact` (≤140); no control characters or `<`/`>`; file ≤ 2000 chars.
+Rules (enforced by `scripts/validate-participants.js`): file name = username + `.json`; exactly the fields `name` (≤30), `emoji` (≤16 chars, must contain an emoji), `fact` (≤200); no control characters or `<`/`>`; file ≤ 2000 chars.
 
 ## Repository layout
 

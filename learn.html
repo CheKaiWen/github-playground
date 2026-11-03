@@ -105,6 +105,10 @@ pwd</code></pre></div>
 <div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">If it is missing (Windows says “'git' is not recognized…”)</span></div><pre>git: command not found</pre></div>
 <p>Got a version number? <i class="ic" data-icon="check-circle"></i> Skip to the next step. If not, install Git:</p>
 <div class="os os-mac"><p>Running <code class="inline">git --version</code> on a Mac usually pops up a window offering to install the <strong>Command Line Developer Tools</strong>. Click <strong>Install</strong>, wait a few minutes, then run <code class="inline">git --version</code> again.</p>
+<p>Prefer <a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a>, the Mac package manager? Install it once (it may ask for your Mac password), then install Git with it:</p>
+<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Install Homebrew</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</code></pre></div>
+<p>Follow the “Next steps” the installer prints (they add <code class="inline">brew</code> to your PATH), then:</p>
+<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Homebrew</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">brew install git</code></pre></div>
 </div>
 <div class="os os-win"><p>Easiest way, in PowerShell:</p>
 <div class="term ps"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">winget install --id Git.Git -e --source winget</code></pre></div>
@@ -323,7 +327,7 @@ origin  {{FORK_URL}} (push)</pre></div>
   "name": "Alex",
   "emoji": "🚀",
   "fact": "I love building robots!"
-}</code></pre></div><p><strong>Rules:</strong> name ≤ 30 characters · exactly one emoji works best · fact ≤ 140 characters · no &lt; or &gt; characters · Save the file when done.</p><div class="callout tip"><span class="callout-title"><i class="ic" data-icon="bulb"></i> Emoji shortcut</span><p><strong>macOS</strong>: <kbd>Ctrl</kbd>+<kbd>⌘</kbd>+<kbd>Space</kbd> · <strong>Windows</strong>: <kbd>Win</kbd>+<kbd>.</kbd> · <strong>Linux</strong>: copy one from <a href="https://emojipedia.org" target="_blank" rel="noopener">emojipedia.org</a>. Terminal editors can be fussy with emoji; if so, use VS Code.</p>
+}</code></pre></div><p><strong>Rules:</strong> name ≤ 30 characters · exactly one emoji works best · fact ≤ 200 characters · no &lt; or &gt; characters · Save the file when done.</p><div class="callout tip"><span class="callout-title"><i class="ic" data-icon="bulb"></i> Emoji shortcut</span><p><strong>macOS</strong>: <kbd>Ctrl</kbd>+<kbd>⌘</kbd>+<kbd>Space</kbd> · <strong>Windows</strong>: <kbd>Win</kbd>+<kbd>.</kbd> · <strong>Linux</strong>: copy one from <a href="https://emojipedia.org" target="_blank" rel="noopener">emojipedia.org</a>. Terminal editors can be fussy with emoji; if so, use VS Code.</p>
 </div>
 </li>
 <li><strong>Ask Git what it sees:</strong><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git status</code></pre></div>

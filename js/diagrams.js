@@ -19,16 +19,14 @@
     t(340, 83, 'push', 'sv-s') + t(340, 160, 'pull', 'sv-s') +
     t(340, 250, 'Git is the camera. GitHub is the shared photo album.', 'sv-note'));
 
-  D['local-remote'] = svg(680, 330, 'Your laptop holds the local repository. GitHub holds your fork, called origin, and the original workshop repository, called upstream.', 'a2',
-    box(10, 100, 200, 130, 'sv-b3') + ic('laptop', 110, 134, 44) + t(110, 178, 'Your laptop', 'sv-h2') + t(110, 200, 'LOCAL repository', 'sv-s') +
+  D['local-remote'] = svg(680, 350, 'Your laptop holds the local repository. GitHub holds your fork, called origin, and the original workshop repository, called upstream. git clone copies your fork down to your laptop, git push sends your changes up to your fork, and a pull request asks the workshop repo to accept them.', 'a2',
+    box(10, 170, 200, 130, 'sv-b3') + ic('laptop', 110, 204, 44) + t(110, 248, 'Your laptop', 'sv-h2') + t(110, 270, 'LOCAL repository', 'sv-s') +
     box(240, 20, 200, 110, 'sv-b2') + ic('git-fork', 340, 52, 44) + t(340, 92, 'Your fork', 'sv-h2') + t(340, 112, '"origin" · REMOTE', 'sv-s') +
-    box(470, 100, 200, 130, 'sv-b4') + ic('home', 570, 134, 44) + t(570, 178, 'Workshop repo', 'sv-h2') + t(570, 200, '"upstream" · the original', 'sv-s') +
-    arrow(200, 120, 250, 90, 'a2') + t(150, 88, 'git clone', 'sv-code') +
-    arrow(190, 205, 230, 140, 'a2', 'sv-dash') +
-    arrow(430, 105, 480, 135, 'a2') + t(500, 88, 'Pull Request', 'sv-code') +
-    arrow(480, 190, 230, 270, 'a2', 'sv-dash') +
-    t(110, 275, 'git push →', 'sv-code') +
-    t(340, 300, 'Fork = copy on GitHub · Clone = copy onto your laptop', 'sv-note'));
+    box(470, 170, 200, 130, 'sv-b4') + ic('home', 570, 204, 44) + t(570, 248, 'Workshop repo', 'sv-h2') + t(570, 270, '"upstream" · the original', 'sv-s') +
+    arrow(300, 136, 205, 190, 'a2') + t(310, 172, 'git clone', 'sv-code') +
+    arrow(80, 166, 236, 96, 'a2') + t(80, 120, 'git push', 'sv-code') +
+    arrow(446, 90, 540, 164, 'a2') + t(560, 112, 'Pull Request', 'sv-code') +
+    t(340, 335, 'Fork = copy on GitHub · Clone = copy onto your laptop', 'sv-note'));
 
   D['areas'] = svg(680, 250, 'Your changes move from the working folder, to the staging area, to local history with git commit, and then to GitHub with git push.', 'a3',
     `<rect x="4" y="20" width="520" height="30" rx="15" class="sv-pill"/>` + t(264, 41, 'On your computer', 'sv-s') +
