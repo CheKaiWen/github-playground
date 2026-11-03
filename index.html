@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHub Playground - Your First Open-Source Contribution</title>
+<meta name="description" content="A self-paced, hands-on Git & GitHub workshop. Add your profile to the live Community Wall.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%80%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&lt;/&gt;</span> GitHub Playground</a>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a data-nav="home" href="index.html">Home</a>
+      <a data-nav="learn" href="learn.html">Learn</a>
+      <a data-nav="resources" href="resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">🎓 Campus workshop · self-paced · ~60 min</span>
+      <h1>Make your first <span class="hl">open-source</span> contribution.</h1>
+      <p class="lead">Learn Git the way developers really use it: in the <strong>terminal</strong>. Add your emoji and a fun fact to the live Community Wall below, and join everyone else who did it today.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="learn.html">🚀 Start Learning</a>
+        <a class="btn btn-lg" href="#wall">👀 See the Wall</a>
+      </div>
+      <p class="hint" style="margin-top:16px">No account needed on this site. Your progress is saved in <em>your</em> browser only.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <span class="float" style="left:2%;top:0">🚀</span>
+      <span class="float" style="right:6%;top:10%">🐙</span>
+      <span class="float" style="left:12%;bottom:-6%">🌟</span>
+      <span class="float" style="right:0;bottom:6%">💻</span>
+      <div class="term hero-terminal">
+        <div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span></div>
+<pre><code><span class="tok-cmd">git</span> <span class="tok-sub">switch</span> <span class="tok-flag">-c</span> add-my-profile
+<span class="tok-cmd">git</span> <span class="tok-sub">add</span> participants/me.json
+<span class="tok-cmd">git</span> <span class="tok-sub">commit</span> <span class="tok-flag">-m</span> <span class="tok-str">"Add my profile"</span>
+<span class="tok-cmd">git</span> <span class="tok-sub">push</span> <span class="tok-flag">-u</span> origin add-my-profile
+<span class="tok-com"># ...and you're on the wall! ✨</span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head"><h2>How it works</h2><p class="muted">Six short missions. Every Git command is typed by <em>you</em> in a real terminal. The website only helps you fork and open the pull request.</p></div>
+    <div class="grid grid-3">
+      <div class="card"><div class="big-num">1</div><h3>Set up &amp; learn</h3><p>Install Git, meet the terminal, and understand what Git and GitHub actually are (with pictures).</p></div>
+      <div class="card"><div class="big-num">2</div><h3>Make a change</h3><p>Fork the project, clone it, create a branch, add a tiny JSON file about you, then commit and push.</p></div>
+      <div class="card"><div class="big-num">3</div><h3>Go live</h3><p>Open a pull request. A facilitator merges it, and your emoji appears on the Community Wall.</p></div>
+    </div>
+    <div class="diagram" data-diagram="flow"></div>
+  </div>
+</section>
+
+<section class="section" id="wall">
+  <div class="container">
+    <div class="wall-top">
+      <div class="section-head" style="margin:0"><h2>🧱 The Community Wall</h2><p class="muted" style="margin:0">Every card below was added by a real person using Git. You're next!</p></div>
+      <div class="wall-meta">
+        <span><span class="wall-count-badge" id="wall-count">0</span> contributors</span>
+        <button class="btn" id="wall-refresh" type="button" style="padding:6px 14px">↻ Refresh</button>
+        <span id="wall-updated"></span>
+        <span id="wall-status" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+    <div id="wall-grid" class="wall-grid" aria-live="polite"></div>
+    <div id="wall-empty" class="wall-empty" hidden><div style="font-size:3rem">🌱</div><h3>The wall is empty... for now!</h3><p>Be the first one to plant something here. Start with Mission 0.</p></div>
+    <div class="callout info" style="margin-top:24px">
+      <strong>⏱ Merged but not showing yet?</strong> After a facilitator merges your pull request, GitHub rebuilds this site. That usually takes <strong>1–3 minutes</strong>. Wait a bit, then press <kbd>↻ Refresh</kbd> (or reload the page).
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <div class="callout privacy">
+      <span class="callout-title">🔒 Privacy: this is all public</span>
+      <p>The Community Wall, your GitHub username, your commits and your pull request are visible to <strong>anyone on the internet</strong> and can be copied or cached, even if deleted later.</p>
+      <ul>
+        <li>Use a <strong>nickname</strong>, not your full name.</li>
+        <li>Keep your fun fact friendly and non-identifying (no phone number, address, student ID, or email).</li>
+        <li>For your Git email, use the private <code class="inline">noreply</code> address GitHub gives you (Mission 0 shows how).</li>
+      </ul>
+    </div>
+    <div style="text-align:center;margin-top:34px">
+      <h2>Ready?</h2>
+      <a class="btn btn-hot btn-lg" href="learn.html">Start Learning →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><strong>GitHub Playground</strong><br>Your first open-source contribution 🚀</div>
+    <div>
+      <a data-link="upstream" href="#" target="_blank" rel="noopener">Workshop repository</a> ·
+      <a href="resources.html">Cheat sheet</a> ·
+      <a href="materials/git-cheatsheet.html">Printable cheat sheet</a>
+    </div>
+    <div style="color:#b9b4d8">Everything you submit is public. Use a nickname, not personal info.</div>
+  </div>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/diagrams.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

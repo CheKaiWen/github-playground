@@ -1,0 +1,40 @@
+name: Validate profile
+
+# Runs on pull requests (including from forks). Fork PRs get a read-only token and no secrets,
+# and we only PARSE the contributor's JSON as data - nothing from the PR is ever executed.
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Only participants/*.json may change
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          changed=$(git diff --name-only "$BASE_SHA" "$HEAD_SHA")
+          echo "Changed files:"; echo "$changed"
+          bad=$(echo "$changed" | grep -Ev '^participants/[^/]+\.json$' || true)
+          if [ -n "$bad" ]; then
+            echo "::error::This pull request changes files outside participants/. Please only add your own profile file. Offending files: $bad"
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate profile files
+        run: node scripts/validate-participants.js

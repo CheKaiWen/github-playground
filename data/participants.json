@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-11-03T02:43:39.155Z",
+  "count": 1,
+  "participants": [
+    {
+      "id": "sample",
+      "name": "Sample Student",
+      "emoji": "🎓",
+      "fact": "I'm the example profile - copy me to make your own!"
+    }
+  ]
+}

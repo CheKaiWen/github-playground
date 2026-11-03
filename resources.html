@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resources - GitHub Playground</title>
+<meta name="description" content="Git cheat sheet, visual explanations, troubleshooting and bonus challenges.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%80%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="resources">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&lt;/&gt;</span> GitHub Playground</a>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a data-nav="home" href="index.html">Home</a>
+      <a data-nav="learn" href="learn.html">Learn</a>
+      <a data-nav="resources" href="resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="section">
+<div class="container">
+  <span class="eyebrow">📚 Resources</span>
+  <h1 style="font-size:clamp(2rem,5vw,3rem)">Cheat sheet, pictures &amp; extras</h1>
+  <p class="lead">Everything you need after (or during) the missions.</p>
+  <div class="res-nav"><a class="btn" href="#cheatsheet">📝 Cheat sheet</a><a class="btn" href="#visuals">🖼 Visual guides</a><a class="btn" href="#troubleshooting">🛟 Troubleshooting</a><a class="btn" href="#bonus">🎯 Bonus missions</a></div>
+  <div class="os-picker" style="margin-top:18px"><strong>My computer:</strong><div class="os-switch" role="group" aria-label="Operating system"><button type="button" data-set-os="mac">🍎 macOS</button><button type="button" data-set-os="win">🪟 Windows</button><button type="button" data-set-os="linux">🐧 Linux</button></div></div>
+</div></section>
+
+<section class="section" id="cheatsheet"><div class="container">
+  <div class="section-head"><h2>📝 Git cheat sheet</h2><p class="muted">The commands from today, one sentence each. <a href="materials/git-cheatsheet.html" target="_blank" rel="noopener">Open the printable one-page version</a> (use your browser’s Print → Save as PDF).</p></div>
+  <div class="cheat-grid"><div><h4>Setup</h4><div class="cheat-row"><code>git --version</code>Check that Git is installed.</div><div class="cheat-row"><code>git config --global user.name "Your Name"</code>Set the name shown on your commits.</div><div class="cheat-row"><code>git config --global user.email "you@example.com"</code>Set the email shown on your commits.</div></div><div><h4>Get a project</h4><div class="cheat-row"><code>git clone &lt;repo-url&gt;</code>Download a repository to your computer.</div><div class="cheat-row"><code>git remote -v</code>Show which online repositories this one is linked to.</div></div><div><h4>Look around</h4><div class="cheat-row"><code>git status</code>Show what changed and what is staged.</div><div class="cheat-row"><code>git log --oneline</code>Show the history, one short line per commit.</div></div><div><h4>Save your work</h4><div class="cheat-row"><code>git switch -c &lt;branch-name&gt;</code>Create a new branch and switch to it.</div><div class="cheat-row"><code>git add &lt;file&gt;</code>Stage a file so it goes into the next commit.</div><div class="cheat-row"><code>git commit -m "message"</code>Save a snapshot of the staged files with a note.</div></div><div><h4>Share</h4><div class="cheat-row"><code>git push -u origin &lt;branch-name&gt;</code>Upload your branch to GitHub and remember the link.</div><div class="cheat-row"><code>git pull</code>Download and merge new changes from GitHub.</div></div></div>
+  <div class="diagram" data-diagram="areas" style="margin-top:24px"></div>
+</div></section>
+
+<section class="section" id="visuals"><div class="container">
+  <div class="section-head"><h2>🖼 Visual guides</h2><p class="muted">Five pictures that explain most of Git.</p></div>
+  <h3>1 · Git vs GitHub</h3><div class="diagram" data-diagram="git-vs-github"></div>
+  <h3>2 · Local vs remote repository</h3><div class="diagram" data-diagram="local-remote"></div>
+  <h3>3 · Working directory → staging → commit → push</h3><div class="diagram" data-diagram="areas"></div>
+  <h3>4 · Branches and merging</h3><div class="diagram" data-diagram="branches"></div>
+  <h3>5 · Fork → clone → commit → push → pull request</h3><div class="diagram" data-diagram="flow"></div>
+</div></section>
+<section class="section" id="troubleshooting"><div class="container narrow"><div class="section-head"><h2>🛟 Troubleshooting</h2><p class="muted">Most errors are typos or being in the wrong folder. Read the message; it usually tells you what’s wrong.</p></div>
+<details><summary><code class="inline">git: command not found</code> / “not recognized”</summary><p>Git isn’t installed or the terminal needs restarting. Install Git (Mission 0), then <strong>close and reopen</strong> the terminal.</p></details>
+<details><summary>“Author identity unknown”</summary><p>Set your name and email: <code class="inline">git config --global user.name "Name"</code> and <code class="inline">git config --global user.email "you@example.com"</code>, then commit again.</p></details>
+<details><summary>“fatal: not a git repository”</summary><p>You’re in the wrong folder. <code class="inline">cd</code> into the project folder (the one containing the hidden <code class="inline">.git</code> folder). <code class="inline">pwd</code> shows where you are.</p></details>
+<details><summary>Stuck in a strange editor (Vim) after <code class="inline">git commit</code></summary><p>Press <kbd>Esc</kbd>, type <code class="inline">:q!</code>, press <kbd>Enter</kbd>. Next time use <code class="inline">git commit -m "message"</code>.</p></details>
+<details><summary>Asked for username/password when pushing</summary><p>GitHub doesn’t accept passwords. Run <code class="inline">gh auth login</code> (browser sign-in), or use a Personal Access Token as the password.</p></details>
+<details><summary>“Permission denied” / 403 when pushing</summary><p>You’re pushing to the original repo, or logged in as the wrong account. <code class="inline">git remote -v</code> must show <em>your</em> fork; <code class="inline">gh auth status</code> shows your account.</p></details>
+<details><summary>“The current branch has no upstream branch”</summary><p>Use <code class="inline">git push -u origin &lt;branch-name&gt;</code> the first time.</p></details>
+<details><summary>“Updates were rejected because the remote contains work that you do not have”</summary><p>Your branch on GitHub has commits you don’t have locally. Run <code class="inline">git pull</code>, then <code class="inline">git push</code>. If it opens an editor for a merge message, save and close it.</p></details>
+<details><summary>“nothing to commit, working tree clean” but I just edited a file</summary><p>Your editor probably didn’t save, or you edited a file outside the project folder. Save (<kbd>Ctrl/Cmd+S</kbd>) and run <code class="inline">git status</code> again.</p></details>
+<details><summary>My pull request check is red ❌</summary><p>Open <em>Details</em> and read the message: usually a JSON typo (missing quote/comma), wrong filename (must be <code class="inline">your-username.json</code>), or extra files changed. Fix, <code class="inline">git add</code>, <code class="inline">git commit</code>, <code class="inline">git push</code>.</p></details>
+<details><summary>I’m merged but not on the wall</summary><p>The site rebuilds after a merge, which takes 1–3 minutes. Hard refresh (<kbd>Ctrl/Cmd+Shift+R</kbd>). Still missing? Ask a facilitator to look at the <em>Actions</em> tab.</p></details>
+<details><summary>Windows: PowerShell says running scripts is disabled</summary><p>You don’t need scripts for this workshop. If you see this after installing something, ignore it or ask a facilitator.</p></details>
+<details><summary>I want to start over</summary><p>Delete the cloned folder (carefully!) and run <code class="inline">git clone</code> again from Mission 2. Your fork on GitHub is unaffected.</p></details>
+<div class="callout info"><span class="callout-title">Still stuck?</span><p>Raise your hand, or copy the <em>exact</em> error text and show a facilitator. Nobody minds, we’ve all been there.</p></div></div></section>
+<section class="section" id="bonus"><div class="container narrow"><div class="section-head"><h2>🎯 Bonus missions</h2><p class="muted">Finished early? These are <strong>optional</strong> and <strong>intermediate</strong>. Don’t worry if you skip them. Type your username in the box on the <a href="learn.html">Learn page</a> to fill in the commands.</p></div>
+<article class="card" style="margin:22px 0"><span class="pill int">Intermediate · optional</span> <span class="pill opt">Bonus 1</span><h3 style="margin-top:10px">Edit your profile and make another commit</h3><p>Real projects are many small commits. Make a second one.</p><ol class="steps">
+<li>Open your profile (<code class="tpl inline">code participants/{{USERNAME}}.json</code>, or <code class="inline">nano</code>/<code class="inline">notepad</code> as in Mission 3) and change your fun fact. Save.</li>
+<li>Check, stage and commit:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git status
+git add participants/{{USERNAME}}.json
+git commit -m "Update my fun fact"</code></pre></div>
+<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git log --oneline</code></pre></div>
+<div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre>9d8c7b6 (HEAD -&gt; add-my-profile) Update my fun fact
+3f2a9c1 Add my profile
+a1b2c3d Update README</pre></div>
+</li>
+<li>Push it: <code class="inline">git push</code> (no extra words needed, thanks to <code class="inline">-u</code>). If your PR is still open, it updates itself.</li>
+</ol>
+<div class="callout warn"><span class="callout-title">⚠️ Already merged?</span><p>If a facilitator already merged your PR, do <strong>Bonus 3</strong> first, then start a fresh branch with <code class="inline">git switch -c update-my-fact</code>, so you don’t get a conflict.</p>
+</div>
+</article>
+<article class="card" style="margin:22px 0"><span class="pill int">Intermediate · optional</span> <span class="pill opt">Bonus 2</span><h3 style="margin-top:10px">Inspect changes with <code class="inline">git diff</code></h3><p>See exactly what changed, line by line, before you commit.</p><ol class="steps">
+<li>Edit your JSON file (change the emoji) but <strong>don’t</strong> stage it yet. Then:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git diff</code></pre></div>
+<div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre class="tpl">diff --git a/participants/{{USERNAME}}.json b/participants/{{USERNAME}}.json
+--- a/participants/{{USERNAME}}.json
++++ b/participants/{{USERNAME}}.json
+@@ -1,5 +1,5 @@
+ {
+   "name": "Alex",
+-  "emoji": "🚀",
++  "emoji": "🦊",
+   "fact": "I love building robots!"
+ }</pre></div>
+<p>Lines starting with <code class="inline">-</code> were removed, <code class="inline">+</code> were added. If the output fills the screen, press <kbd>Space</kbd> to scroll and <kbd>q</kbd> to quit.</p>
+</li>
+<li>Stage it and compare again:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git add participants/{{USERNAME}}.json
+git diff --staged</code></pre></div>
+<p><code class="inline">git diff</code> = “changes not staged yet”. <code class="inline">git diff --staged</code> = “changes that will go into the next commit”.</p>
+</li>
+<li>Compare two branches: <code class="inline">git diff main</code> shows how your current branch differs from <code class="inline">main</code>. (Undo the experiment with <code class="tpl inline">git restore --staged participants/{{USERNAME}}.json</code> then <code class="tpl inline">git restore participants/{{USERNAME}}.json</code>.)</li>
+</ol>
+</article>
+<article class="card" style="margin:22px 0"><span class="pill int">Intermediate · optional</span> <span class="pill opt">Bonus 3</span><h3 style="margin-top:10px">Sync with upstream using <code class="inline">git pull</code></h3><p>Get everyone else’s merged work onto your computer.</p><p>Your fork doesn’t automatically get new commits from the original project (the <em>upstream</em>). Let’s fetch them, for example everyone else’s merged profiles.</p>
+<ol class="steps">
+<li>Tell Git about the original repo once:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git remote add upstream {{UPSTREAM_URL}}.git
+git remote -v</code></pre></div>
+<div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre class="tpl">origin    {{FORK_URL}} (fetch)
+origin    {{FORK_URL}} (push)
+upstream  {{UPSTREAM_URL}}.git (fetch)
+upstream  {{UPSTREAM_URL}}.git (push)</pre></div>
+</li>
+<li>Update your local <code class="inline">main</code>:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git switch main
+git pull upstream main</code></pre></div>
+<div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre class="tpl">From {{UPSTREAM_URL}}
+ * branch            main       -&gt; FETCH_HEAD
+Updating a1b2c3d..e4f5a6b
+Fast-forward
+ participants/sam-dev.json  | 5 +++++
+ participants/mia-codes.json | 5 +++++
+ 2 files changed, 10 insertions(+)</pre></div>
+<p><code class="inline">git pull</code> = download new commits (<em>fetch</em>) and combine them with yours (<em>merge</em>). “Already up to date” just means nothing new has been merged yet.</p>
+</li>
+<li>Optionally update your fork on GitHub too:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git push origin main</code></pre></div>
+</li>
+<li>Run <code class="inline">ls participants</code>. You’ll see other people’s files appear on your computer!</li>
+</ol>
+</article>
+<article class="card" style="margin:22px 0"><span class="pill int">Intermediate · optional</span> <span class="pill opt">Bonus 4</span><h3 style="margin-top:10px">Two branches, one folder</h3><p>Create two branches and switch between them in a throwaway repo.</p><p>Safe playground: we create a brand-new, throwaway repository so we don’t touch your real fork.</p>
+<ol class="steps">
+<li>Create the practice repo with a first commit:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">cd ~/workshop
+mkdir branch-practice
+cd branch-practice
+git init -b main</code></pre></div>
+<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git commit --allow-empty -m "Start practice"</code></pre></div>
+<p>(<code class="inline">--allow-empty</code> lets you commit with no files, handy for practice.)</p>
+</li>
+<li>Create <code class="inline">branch-a</code> and add a file to it:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git switch -c branch-a</code></pre></div>
+<div class="os os-mac"><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">touch a.txt</code></pre></div>
+</div>
+<div class="os os-linux"><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">touch a.txt</code></pre></div>
+</div>
+<div class="os os-win"><div class="term ps"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">New-Item a.txt -ItemType File</code></pre></div>
+</div>
+<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git add a.txt
+git commit -m "Add a.txt"</code></pre></div>
+</li>
+<li>Back to <code class="inline">main</code>, create <code class="inline">branch-b</code> with a different file:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git switch main
+git switch -c branch-b</code></pre></div>
+<div class="os os-mac"><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">touch b.txt</code></pre></div>
+</div>
+<div class="os os-linux"><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">touch b.txt</code></pre></div>
+</div>
+<div class="os os-win"><div class="term ps"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">New-Item b.txt -ItemType File</code></pre></div>
+</div>
+<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git add b.txt
+git commit -m "Add b.txt"</code></pre></div>
+</li>
+<li>Hop between them and watch the files appear and vanish:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git switch branch-a
+ls
+git switch branch-b
+ls
+git branch</code></pre></div>
+<div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre>Switched to branch 'branch-a'
+a.txt
+Switched to branch 'branch-b'
+b.txt
+  branch-a
+* branch-b
+  main</pre></div>
+<p>Each branch is its own timeline. See them all: <code class="inline">git log --oneline --graph --all</code>.</p>
+</li>
+</ol>
+</article>
+<article class="card" style="margin:22px 0"><span class="pill int">Intermediate · optional</span> <span class="pill opt">Bonus 5</span><h3 style="margin-top:10px">Resolve a merge conflict (practice repo)</h3><p>Create a conflict on purpose and fix it. Zero risk to the workshop repo.</p><p>A <strong>merge conflict</strong> happens when two branches change the <em>same line</em>, so Git asks you to decide. It sounds scary but it is just a text file with markers. We’ll make one on purpose, in a disposable repo.</p>
+<ol class="steps">
+<li>Create a practice repo:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">cd ~/workshop
+mkdir conflict-practice
+cd conflict-practice
+git init -b main</code></pre></div>
+Create <code class="inline">story.txt</code> and commit it:<div class="os os-mac"><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">printf 'Roses are red\n' &gt; story.txt</code></pre></div>
+</div>
+<div class="os os-linux"><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">printf 'Roses are red\n' &gt; story.txt</code></pre></div>
+</div>
+<div class="os os-win"><div class="term ps"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">Set-Content story.txt "Roses are red"</code></pre></div>
+</div>
+<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git add story.txt
+git commit -m "Add story"</code></pre></div>
+</li>
+<li>On a branch, change the line:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git switch -c feature</code></pre></div>
+<div class="os os-mac"><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">printf 'Roses are scarlet\n' &gt; story.txt</code></pre></div>
+</div>
+<div class="os os-linux"><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">printf 'Roses are scarlet\n' &gt; story.txt</code></pre></div>
+</div>
+<div class="os os-win"><div class="term ps"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">Set-Content story.txt "Roses are scarlet"</code></pre></div>
+</div>
+<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git commit -am "Scarlet roses"</code></pre></div>
+</li>
+<li>Back on <code class="inline">main</code>, change <em>the same line</em> differently:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git switch main</code></pre></div>
+<div class="os os-mac"><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">printf 'Roses are crimson\n' &gt; story.txt</code></pre></div>
+</div>
+<div class="os os-linux"><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">printf 'Roses are crimson\n' &gt; story.txt</code></pre></div>
+</div>
+<div class="os os-win"><div class="term ps"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">Set-Content story.txt "Roses are crimson"</code></pre></div>
+</div>
+<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git commit -am "Crimson roses"</code></pre></div>
+</li>
+<li>Merge, and meet the conflict:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git merge feature</code></pre></div>
+<div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre>Auto-merging story.txt
+CONFLICT (content): Merge conflict in story.txt
+Automatic merge failed; fix conflicts and then commit the result.</pre></div>
+</li>
+<li>Open <code class="inline">story.txt</code> (<code class="inline">code story.txt</code>, <code class="inline">nano story.txt</code> or <code class="inline">notepad story.txt</code>). It looks like this:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">story.txt</span></div><pre><code class="cmd plain">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Roses are crimson
+=======
+Roses are scarlet
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature</code></pre></div><p>Above <code class="inline">=======</code> is <em>your</em> side (main); below is the <em>other</em> side (feature). Edit the file to the final text you want, for example <code class="inline">Roses are crimson and scarlet</code>, and <strong>delete the three marker lines</strong> (<code class="inline">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code class="inline">=======</code>, <code class="inline">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>). Save.</p>
+</li>
+<li>Tell Git it’s resolved:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git add story.txt
+git commit -m "Resolve conflict"</code></pre></div>
+<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git log --oneline --graph</code></pre></div>
+<div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre>*   7c6b5a4 (HEAD -&gt; main) Resolve conflict
+|\  
+| * 2b3c4d5 (feature) Scarlet roses
+* | 8e9f0a1 Crimson roses
+|/  
+* 1a2b3c4 Add story</pre></div>
+</li>
+</ol>
+<div class="callout tip"><span class="callout-title">💡 Changed your mind mid-conflict?</span><p>Run <code class="inline">git merge --abort</code> to go back to before the merge.</p>
+</div>
+</article>
+</div></section>
+<section class="section"><div class="container narrow"><div class="callout privacy"><span class="callout-title">🔒 Privacy reminder</span><p>Contributions to the Community Wall are <strong>public</strong>. Use a nickname, never personal details like your phone number, address, student ID or private email.</p></div></div></section>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><strong>GitHub Playground</strong><br>Your first open-source contribution 🚀</div>
+    <div>
+      <a data-link="upstream" href="#" target="_blank" rel="noopener">Workshop repository</a> ·
+      <a href="resources.html">Cheat sheet</a> ·
+      <a href="materials/git-cheatsheet.html">Printable cheat sheet</a>
+    </div>
+    <div style="color:#b9b4d8">Everything you submit is public. Use a nickname, not personal info.</div>
+  </div>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/diagrams.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

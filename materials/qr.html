@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QR code - GitHub Playground</title>
+<style>
+  body { font-family: ui-rounded, "Segoe UI", system-ui, sans-serif; margin: 0; background: #fff8ee; color: #1f1b3a; text-align: center; padding: 24px; }
+  h1 { margin: 0 0 6px; } input { font: inherit; width: min(560px, 100%); padding: 10px 14px; border: 3px solid #1f1b3a; border-radius: 12px; }
+  #qr { display: inline-block; background: #fff; padding: 22px; border: 4px solid #1f1b3a; border-radius: 22px; margin: 22px 0 8px; }
+  #qr img, #qr canvas { display: block; }
+  .url { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 1.1rem; word-break: break-all; }
+  button { font: inherit; font-weight: 800; padding: 8px 18px; border: 3px solid #1f1b3a; border-radius: 12px; background: #6c5ce7; color: #fff; cursor: pointer; }
+  .tabs { display:flex; gap:8px; justify-content:center; margin: 14px 0; flex-wrap: wrap; }
+  .tabs button { background:#fff; color:#1f1b3a; } .tabs button[aria-pressed=true] { background:#1f1b3a; color:#fff; }
+  @media print { .no-print { display: none; } body { background: #fff; } }
+</style>
+</head>
+<body>
+<h1>🚀 GitHub Playground</h1>
+<p>Scan to start the workshop</p>
+<div class="no-print">
+  <div class="tabs"><button type="button" data-p="learn.html" aria-pressed="true">Learn guide</button><button type="button" data-p="index.html" aria-pressed="false">Community Wall</button><button type="button" data-p="" aria-pressed="false">Site home</button></div>
+  <label for="u" class="sr">Address to encode</label><br>
+  <input id="u" type="url" autocomplete="off">
+  <p><button type="button" onclick="window.print()">🖨 Print / save as PDF</button></p>
+</div>
+<div id="qr"></div>
+<div class="url" id="shown"></div>
+<p class="no-print" style="color:#5f5a7a;font-size:.9rem">Needs internet once to load the QR library. Offline backup: in Chrome, open the page → address bar → Share → <em>Create QR code</em>.</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  // Default: the learn page of the site this file is served from (…/materials/qr.html → …/learn.html)
+  var base = location.href.replace(/materials\/qr\.html.*$/, '');
+  var input = document.getElementById('u'), shown = document.getElementById('shown'), box = document.getElementById('qr'), qr;
+  function draw() {
+    var v = input.value.trim(); shown.textContent = v; box.innerHTML = '';
+    if (!v || typeof QRCode === 'undefined') { if (typeof QRCode === 'undefined') box.textContent = 'QR library failed to load (offline?)'; return; }
+    qr = new QRCode(box, { text: v, width: 320, height: 320, correctLevel: QRCode.CorrectLevel.M });
+  }
+  input.value = base + 'learn.html'; input.addEventListener('input', draw);
+  document.querySelectorAll('[data-p]').forEach(function (b) { b.addEventListener('click', function () {
+    document.querySelectorAll('[data-p]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+    input.value = base + b.dataset.p; draw(); }); });
+  window.addEventListener('load', draw);
+</script>
+</body>
+</html>

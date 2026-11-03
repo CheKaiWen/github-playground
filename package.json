@@ -1,0 +1,14 @@
+{
+  "name": "github-playground",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub Playground - a self-paced Git & GitHub workshop with a live Community Wall",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "validate": "node scripts/validate-participants.js",
+    "build": "node scripts/build-participants.js",
+    "test": "node scripts/validate-participants.js && node scripts/build-participants.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
