@@ -6,7 +6,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const PARTICIPANTS_DIR = path.join(ROOT, 'participants');
 
-const LIMITS = { name: 30, emoji: 16, fact: 140 };
+const LIMITS = { name: 30, emoji: 16, fact: 200 };
 const ALLOWED_KEYS = ['name', 'emoji', 'fact'];
 // GitHub usernames: letters, digits, single hyphens (we are a bit lenient).
 const FILENAME_RE = /^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?\.json$/;
