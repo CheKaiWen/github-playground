@@ -178,6 +178,20 @@
       return el;
     }
 
+    const search = document.getElementById('wall-search');
+    function applyFilter() {
+      const q = search ? search.value.trim().toLowerCase() : '';
+      let shown = 0;
+      Array.from(grid.children).forEach((c) => { const ok = !q || c.textContent.toLowerCase().includes(q); c.hidden = !ok; if (ok) shown++; });
+      if (search) statusEl.textContent = q ? shown + ' match' + (shown === 1 ? '' : 'es') : '';
+    }
+    if (search) search.addEventListener('input', applyFilter);
+    const fs = document.getElementById('wall-fullscreen');
+    if (fs) fs.addEventListener('click', () => {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else if (document.documentElement.requestFullscreen) document.documentElement.requestFullscreen();
+    });
+
     async function loadWall(manual) {
       if (manual) statusEl.textContent = 'Refreshing…';
       try {
@@ -187,10 +201,11 @@
         const list = Array.isArray(data.participants) ? data.participants : [];
         grid.replaceChildren(...list.map(card));
         countEl.textContent = list.length;
+        applyFilter();
         document.getElementById('wall-empty').hidden = list.length > 0;
         const when = data.generatedAt ? new Date(data.generatedAt) : null;
         updEl.textContent = when && !isNaN(when) ? 'Wall rebuilt at ' + when.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '';
-        statusEl.textContent = manual ? 'Up to date' : '';
+        if (manual) statusEl.textContent = 'Up to date';
       } catch (err) {
         statusEl.textContent = 'Could not load the wall right now. Try again in a moment.';
       }

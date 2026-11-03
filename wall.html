@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community Wall - GitHub Playground</title>
+<meta name="description" content="The live Community Wall: everyone who made their first contribution.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%80%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css?v=dev">
+</head>
+<body data-page="wall">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&lt;/&gt;</span> GitHub Playground</a>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><i class="ic" data-icon="menu"></i> Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a data-nav="home" href="index.html">Home</a>
+      <a data-nav="learn" href="learn.html">Learn</a>
+      <a data-nav="wall" href="wall.html">Wall</a>
+      <a data-nav="resources" href="resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="wall-page">
+  <div class="container-wide">
+    <div class="wall-hero">
+      <div>
+        <h1>Community Wall</h1>
+        <p class="lead" style="margin:0">Everyone below added themselves with Git. Join in at <strong class="tpl">{{SITE_URL}}learn.html</strong></p>
+      </div>
+      <div class="wall-tools">
+        <div class="wall-bignum"><span id="wall-count">0</span><small>contributors</small></div>
+        <label class="sr-only" for="wall-search">Search the wall</label>
+        <input id="wall-search" type="search" placeholder="Search name or @username" autocomplete="off">
+        <button class="btn" id="wall-refresh" type="button"><i class="ic" data-icon="refresh"></i> Refresh</button>
+        <button class="btn btn-primary" id="wall-fullscreen" type="button"><i class="ic" data-icon="monitor"></i> Fullscreen</button>
+      </div>
+    </div>
+    <div class="wall-meta" style="margin:0 0 14px"><span id="wall-updated"></span><span id="wall-status" role="status" aria-live="polite"></span></div>
+    <div id="wall-grid" class="wall-grid wall-grid-xl" aria-live="polite"></div>
+    <div id="wall-empty" class="wall-empty" hidden><div><i class="ic" data-icon="sprout"></i></div><h3>The wall is empty... for now</h3><p>Be the first. Start with Mission 0 on the Learn page.</p></div>
+    <p class="hint" style="margin-top:20px">New cards appear 1–3 minutes after a pull request is merged. This page refreshes itself.</p>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><strong>GitHub Playground</strong><br>Your first open-source contribution <i class="ic" data-icon="rocket"></i></div>
+    <div>
+      <a data-link="upstream" href="#" target="_blank" rel="noopener">Workshop repository</a> ·
+      <a href="resources.html">Cheat sheet</a> ·
+      <a href="materials/git-cheatsheet.html">Printable cheat sheet</a> ·
+      <a href="materials/qr.html">QR code</a>
+    </div>
+    <div style="color:#b9b4d8">Everything you submit is public. Use a nickname, not personal info.</div>
+  </div>
+</footer>
+<script src="js/config.js?v=dev"></script>
+<script src="js/icons.js?v=dev"></script>
+<script src="js/diagrams.js?v=dev"></script>
+<script src="js/app.js?v=dev"></script>
+</body>
+</html>

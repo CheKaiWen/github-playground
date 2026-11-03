@@ -281,3 +281,22 @@ details.desktop[open] { border-style: solid; }
 .method-switch { display: flex; margin-top: 8px; border: 1.5px solid var(--edge); border-radius: 10px; overflow: hidden; background: #fff; }
 .method-switch button { flex: 1; font: inherit; font-weight: 600; font-size: .9rem; padding: 7px 8px; border: 0; background: transparent; cursor: pointer; color: var(--ink); }
 .method-switch button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+
+/* ── Full-page wall ── */
+.container-wide { width: min(1600px, 100% - 48px); margin-inline: auto; }
+.wall-page { padding: 36px 0 60px; min-height: 80vh; }
+.wall-hero { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: flex-end; margin-bottom: 16px; }
+.wall-hero h1 { margin-bottom: 6px; }
+.wall-tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.wall-tools input[type=search] { font: inherit; padding: 9px 14px; border: 1.5px solid var(--edge); border-radius: 10px; min-width: 220px; background: #fff; }
+.wall-bignum { display: flex; align-items: baseline; gap: 8px; margin-right: 8px; }
+.wall-bignum span { font-size: 2.6rem; font-weight: 800; line-height: 1; color: var(--purple-d); }
+.wall-bignum small { color: var(--muted); }
+.wall-grid-xl { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.wall-grid-xl .wall-card { padding: 24px; }
+.wall-grid-xl .wall-emoji { font-size: 3.2rem; }
+.wall-grid-xl .wall-card h3 { font-size: 1.4rem; }
+.wall-grid-xl .wall-card p { font-size: 1.05rem; }
+:fullscreen body { background: var(--bg); overflow-y: auto; }
+:fullscreen .site-header, :fullscreen .site-footer, :fullscreen .wall-page .hint { display: none; }
+:fullscreen .wall-page { padding-top: 24px; }
