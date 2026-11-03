@@ -24,25 +24,27 @@
 </header>
 <main id="main">
 <section class="wall-page">
-  <div class="container-wide">
-    <div class="wall-hero">
-      <div class="wall-qr"><div id="wall-qr"></div><strong>Scan to join</strong><span id="wall-qr-url" class="wall-qr-url"></span></div>
-      <div class="wall-title">
+  <div class="container-wide wall-layout">
+    <div class="wall-main">
+      <header class="wall-head">
         <h1>Community Wall</h1>
-        <p class="lead" style="margin:0">Everyone below added themselves with Git. Join in at <strong class="tpl">{{SITE_URL}}learn.html</strong></p>
-      </div>
-      <div class="wall-tools">
-        <div class="wall-bignum"><span id="wall-count">0</span><small>contributors</small></div>
+        <p class="lead">Everyone here added themselves using Git. Scan the code to join them.</p>
+      </header>
+      <div class="wall-toolbar">
         <label class="sr-only" for="wall-search">Search the wall</label>
-        <input id="wall-search" type="search" placeholder="Search name or @username" autocomplete="off">
+        <input id="wall-search" type="search" placeholder="Search by name or @username" autocomplete="off">
         <button class="btn" id="wall-refresh" type="button"><i class="ic" data-icon="refresh"></i> Refresh</button>
-        <button class="btn btn-primary" id="wall-fullscreen" type="button"><i class="ic" data-icon="monitor"></i> Fullscreen</button>
+        <button class="btn" id="wall-fullscreen" type="button"><i class="ic" data-icon="monitor"></i> Fullscreen</button>
+        <span class="wall-status-line"><span id="wall-updated"></span> <span id="wall-status" role="status" aria-live="polite"></span></span>
       </div>
+      <div id="wall-grid" class="wall-grid wall-grid-xl" aria-live="polite"></div>
+      <div id="wall-empty" class="wall-empty" hidden><div><i class="ic" data-icon="sprout"></i></div><h3>The wall is empty... for now</h3><p>Be the first. Start with Mission 0 on the Learn page.</p></div>
+      <p class="hint" style="margin-top:20px">New cards appear 1–3 minutes after a pull request is merged. This page refreshes itself.</p>
     </div>
-    <div class="wall-meta" style="margin:0 0 14px"><span id="wall-updated"></span><span id="wall-status" role="status" aria-live="polite"></span></div>
-    <div id="wall-grid" class="wall-grid wall-grid-xl" aria-live="polite"></div>
-    <div id="wall-empty" class="wall-empty" hidden><div><i class="ic" data-icon="sprout"></i></div><h3>The wall is empty... for now</h3><p>Be the first. Start with Mission 0 on the Learn page.</p></div>
-    <p class="hint" style="margin-top:20px">New cards appear 1–3 minutes after a pull request is merged. This page refreshes itself.</p>
+    <aside class="wall-side" aria-label="Join the workshop">
+      <div class="wall-qr"><div id="wall-qr"></div><strong>Scan to join</strong><span id="wall-qr-url" class="wall-qr-url"></span></div>
+      <div class="wall-bignum"><span id="wall-count">0</span><small>contributors</small></div>
+    </aside>
   </div>
 </section>
 

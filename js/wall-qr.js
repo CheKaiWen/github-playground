@@ -7,5 +7,5 @@
   const caption = document.getElementById('wall-qr-url');
   if (caption) caption.textContent = url.replace(/^https?:\/\//, '');
   if (typeof QRCode === 'undefined') { box.closest('.wall-qr').hidden = true; return; }
-  new QRCode(box, { text: url, width: 200, height: 200, colorDark: '#1f1b3a', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M });
+  new QRCode(box, { text: url, width: 260, height: 260, colorDark: '#1f1b3a', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M });
 })();

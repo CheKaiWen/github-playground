@@ -283,27 +283,38 @@ details.desktop[open] { border-style: solid; }
 .method-switch button[aria-pressed="true"] { background: var(--ink); color: #fff; }
 
 /* ── Full-page wall ── */
+body[data-page="wall"] .site-header .container { width: min(1600px, 100% - 48px); }
 .container-wide { width: min(1600px, 100% - 48px); margin-inline: auto; }
-.wall-page { padding: 36px 0 60px; min-height: 80vh; }
-.wall-hero { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end; margin-bottom: 16px; }
-.wall-title { flex: 1 1 360px; order: 1; } .wall-tools { order: 2; } .wall-qr { order: 3; }
-.wall-hero h1 { margin-bottom: 6px; }
-.wall-tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-.wall-tools input[type=search] { font: inherit; padding: 9px 14px; border: 1.5px solid var(--edge); border-radius: 10px; min-width: 220px; background: #fff; }
-.wall-bignum { display: flex; align-items: baseline; gap: 8px; margin-right: 8px; }
-.wall-bignum span { font-size: 2.6rem; font-weight: 800; line-height: 1; color: var(--purple-d); }
-.wall-bignum small { color: var(--muted); }
-.wall-grid-xl { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-.wall-grid-xl .wall-card { padding: 24px; }
-.wall-grid-xl .wall-emoji { font-size: 3.2rem; }
-.wall-grid-xl .wall-card h3 { font-size: 1.4rem; }
-.wall-grid-xl .wall-card p { font-size: 1.05rem; }
+.wall-page { padding: 40px 0 64px; min-height: 80vh; }
+.wall-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: start; }
+.wall-head h1 { margin-bottom: 6px; }
+.wall-head .lead { margin-bottom: 20px; }
+.wall-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 22px; }
+.wall-toolbar input[type=search] { font: inherit; padding: 10px 14px; border: 1.5px solid var(--edge); border-radius: 10px; width: min(320px, 100%); background: #fff; }
+.wall-status-line { margin-left: auto; color: var(--muted); font-size: .9rem; }
+.wall-side { position: sticky; top: 90px; display: grid; gap: 16px; }
+.wall-qr { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 22px 20px; background: #fff; border: 1.5px solid var(--edge); border-radius: 16px; box-shadow: var(--shadow); text-align: center; }
+.wall-qr[hidden] { display: none; }
+.wall-qr strong { font-size: 1.15rem; }
+.wall-qr #wall-qr img, .wall-qr #wall-qr canvas { display: block; width: 220px; height: 220px; }
+.wall-qr-url { font-family: var(--mono); font-size: .78rem; color: var(--muted); overflow-wrap: anywhere; }
+.wall-bignum { display: flex; align-items: baseline; justify-content: center; gap: 10px; padding: 16px; background: #fff; border: 1.5px solid var(--edge); border-radius: 16px; }
+.wall-bignum span { font-size: 3rem; font-weight: 800; line-height: 1; color: var(--purple-d); }
+.wall-bignum small { color: var(--muted); font-size: 1rem; }
+.wall-grid-xl { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+.wall-grid-xl .wall-card { padding: 22px; }
+.wall-grid-xl .wall-emoji { font-size: 3rem; }
+.wall-grid-xl .wall-card h3 { font-size: 1.3rem; }
+.wall-grid-xl .wall-card p { font-size: 1.02rem; }
+.wall-card.is-me { outline: 2px solid var(--purple); outline-offset: 2px; }
 :fullscreen body { background: var(--bg); overflow-y: auto; }
 :fullscreen .site-header, :fullscreen .site-footer, :fullscreen .wall-page .hint { display: none; }
-:fullscreen .wall-page { padding-top: 24px; }
-
-.wall-qr { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 14px 16px; background: #fff; border: 1.5px solid var(--edge); border-radius: 14px; box-shadow: var(--shadow); text-align: center; }
-.wall-qr[hidden] { display: none; }
-.wall-qr #wall-qr img, .wall-qr #wall-qr canvas { display: block; width: 168px; height: 168px; }
-.wall-qr-url { font-family: var(--mono); font-size: .78rem; color: var(--muted); max-width: 200px; overflow-wrap: anywhere; }
-:fullscreen .wall-qr #wall-qr img, :fullscreen .wall-qr #wall-qr canvas { width: 220px; height: 220px; }
+:fullscreen .wall-page { padding-top: 28px; }
+:fullscreen .wall-layout { grid-template-columns: minmax(0, 1fr) 340px; }
+:fullscreen .wall-qr #wall-qr img, :fullscreen .wall-qr #wall-qr canvas { width: 260px; height: 260px; }
+@media (max-width: 1000px) {
+  .wall-layout { grid-template-columns: 1fr; }
+  .wall-side { position: static; order: -1; grid-template-columns: auto 1fr; align-items: center; }
+  .wall-qr #wall-qr img, .wall-qr #wall-qr canvas { width: 150px; height: 150px; }
+  .wall-status-line { margin-left: 0; }
+}
