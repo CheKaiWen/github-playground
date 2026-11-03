@@ -91,7 +91,6 @@ p { margin: 0 0 1em; }
 .callout > :last-child { margin-bottom: 0; }
 .callout.tip { background: #e8fbf4; } .callout.warn { background: #fff3d6; } .callout.danger { background: #ffe4ec; } .callout.info { background: #e7f6fd; }
 .callout .callout-title { font-weight: 900; display: block; margin-bottom: 4px; }
-.privacy { background: #ffe4ec; }
 
 /* ── Terminal blocks ── */
 .term { border-radius: 12px; overflow: hidden; background: #1e1e2e; margin: 14px 0 18px; box-shadow: var(--shadow-s); }

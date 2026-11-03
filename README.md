@@ -71,7 +71,6 @@ Rules (enforced by `scripts/validate-participants.js`): file name = username + `
 - **Validation workflow** (`pull_request`): read-only token, no secrets, no `pull_request_target`. It fails PRs touching anything but `participants/*.json` and only *parses* contributor JSON; contributor code is never executed with privileges.
 - **Deploy workflow** runs only on pushes to `main` (after a human merge) with the minimum Pages permissions.
 - All contributor text is rendered via `textContent`, so there is no HTML injection.
-- Participants are warned throughout that **everything is public**: nicknames, not personal info.
 - Progress tracking and the username box use `localStorage` in the participant’s browser only. No accounts, no analytics.
 
 ## Customising

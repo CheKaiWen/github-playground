@@ -65,7 +65,7 @@ git push -u origin main
 
 | Time | What |
 |---|---|
-| 0:00 | 5-min welcome: “We’ll make a real open-source contribution. You’ll type every command yourself.” Show QR. Explain the privacy rule (nicknames!). |
+| 0:00 | 5-min welcome: “We’ll make a real open-source contribution. You’ll type every command yourself.” Show QR. |
 | 0:05 | Participants start Mission 0. Walk around. This is where most problems happen. |
 | 0:25 | Most should be forking/cloning (M1–M2). Pair up anyone who’s ahead with someone stuck. |
 | 0:45 | PRs start arriving. Merge continuously (§6). Project the Wall. |
@@ -78,7 +78,7 @@ Tip: don’t lecture. Put the **Wall on the projector** and let it fill up. It�
 **What to check (10 seconds):** open the PR → **Files changed**:
 
 1. Exactly **one** file, `participants/<something>.json`.
-2. Content is friendly and doesn’t contain personal info (full name + phone, email, student ID, address…). If it does, comment and ask them to change it (they just edit & push again), or edit nothing and close the PR.
+2. Content is friendly and appropriate for the room. If it isn’t, comment and ask them to change it (they just edit & push again), or close the PR.
 3. Check is green (if it says *waiting for approval*, click **Approve and run workflows**).
 
 Then click **Squash and merge** (or *Merge*; either is fine) → Confirm. Say “merged!” out loud. 

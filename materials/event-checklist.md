@@ -19,7 +19,7 @@
 - [ ] Printed cheat sheets (`materials/git-cheatsheet.html` → Print)
 
 ## During
-- [ ] Welcome + privacy rule: **nicknames, not personal info**
+- [ ] Welcome and show the QR code
 - [ ] Mission 0 is the longest: circulate. Pair up the stuck with the fast
 - [ ] Approve fork workflows if PR checks say “waiting”
 - [ ] Merge PRs continuously; announce each merge

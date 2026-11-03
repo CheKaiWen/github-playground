@@ -116,16 +116,14 @@ pwd</code></pre></div>
 <div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Arch</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">sudo pacman -S git</code></pre></div>
 </div>
 </li>
-<li><strong>Tell Git who you are.</strong> Git stamps your name and email on every save (commit). Use your nickname, and GitHub’s private email so your real address stays hidden:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git config --global user.name "Your Nickname"
+<li><strong>Tell Git who you are.</strong> Git stamps your name and email on every save (commit). Use the email address of your GitHub account:<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git config --global user.name "Your Nickname"
 git config --global user.email "you@example.com"</code></pre></div>
 <p>Replace the two values with your own. Then double-check:</p>
 <div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git config --global --list</code></pre></div>
 <div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre>user.name=Alex
-user.email=12345678+alex-123@users.noreply.github.com</pre></div>
-<div class="callout tip"><span class="callout-title"><i class="ic" data-icon="bulb"></i> Where do I find my private GitHub email?</span><p>After creating your GitHub account (next step): <strong>GitHub → Settings → Emails</strong>. Tick <em>“Keep my email addresses private”</em> and copy the address that looks like <code class="inline">12345678+username@users.noreply.github.com</code>. Then re-run the <code class="inline">user.email</code> command with it.</p>
-</div>
+user.email=alex@example.com</pre></div>
 </li>
-<li><strong>Create (or log in to) your GitHub account</strong> at <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a>. Verify your email address. Choose a username you are happy to have <em>public</em>. Then type it in the <strong>“Your GitHub username”</strong> box on this page, and all the commands will fill in your name for you. </li>
+<li><strong>Create (or log in to) your GitHub account</strong> at <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a>. Verify your email address. Then type it in the <strong>“Your GitHub username”</strong> box on this page, and all the commands will fill in your name for you. </li>
 <li><strong>Let your computer prove it is you (authentication).</strong> The simplest reliable way is the <strong>GitHub CLI</strong> (<code class="inline">gh</code>). It signs you in through your browser and gives Git a secure key. First install it:<div class="os os-mac"><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Homebrew</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">brew install gh</code></pre></div>
 <p>No Homebrew? Download the installer from <a href="https://cli.github.com" target="_blank" rel="noopener">cli.github.com</a>.</p>
 </div>
@@ -153,7 +151,7 @@ Press Enter to open github.com in your browser...
 </div>
 </li>
 </ol>
-<details class="desktop"><summary><i class="ic" data-icon="monitor"></i> Prefer clicking to typing? Do this in GitHub Desktop instead</summary><p class="hint">Same Git underneath, just buttons. Great if the terminal is blocking you. You can still switch to the terminal steps above any time.</p><ol class="steps"><li><strong>Install GitHub Desktop</strong> (macOS and Windows only) from <a href="https://desktop.github.com" target="_blank" rel="noopener">desktop.github.com</a>. It includes Git, so you can skip the Git install and <code class="inline">git config</code> steps. <em>Linux users: please use the terminal steps.</em></li><li>Create your GitHub account (the account step above) if you do not have one.</li><li>Open GitHub Desktop, choose <strong>Sign in to GitHub.com</strong>, your browser opens, click <strong>Authorize desktop</strong>. This replaces <code class="inline">gh auth login</code>. No password typing.</li><li>It asks for your name and email. Use your <strong>nickname</strong> and your private <code class="inline">noreply</code> email (see the tip above). You can change them later in <em>Settings / Options, Git</em>.</li></ol></details>
+<details class="desktop"><summary><i class="ic" data-icon="monitor"></i> Prefer clicking to typing? Do this in GitHub Desktop instead</summary><p class="hint">Same Git underneath, just buttons. Great if the terminal is blocking you. You can still switch to the terminal steps above any time.</p><ol class="steps"><li><strong>Install GitHub Desktop</strong> (macOS and Windows only) from <a href="https://desktop.github.com" target="_blank" rel="noopener">desktop.github.com</a>. It includes Git, so you can skip the Git install and <code class="inline">git config</code> steps. <em>Linux users: please use the terminal steps.</em></li><li>Create your GitHub account (the account step above) if you do not have one.</li><li>Open GitHub Desktop, choose <strong>Sign in to GitHub.com</strong>, your browser opens, click <strong>Authorize desktop</strong>. This replaces <code class="inline">gh auth login</code>. No password typing.</li><li>It asks for your name and email. Fill them in; you can change them later in <em>Settings / Options, Git</em>.</li></ol></details>
 </section>
 <section class="block"><h3><span class="ico" aria-hidden="true"><i class="ic" data-icon="life-buoy"></i></span>Common mistakes &amp; troubleshooting</h3>
 <details><summary>“git: command not found” / “git is not recognized”</summary><p>Git is not installed, or the terminal was opened <em>before</em> installing. <strong>Close the terminal completely and open a new one</strong>, then try again. Still failing? Redo the install step for your system.</p>
@@ -320,12 +318,12 @@ origin  {{FORK_URL}} (push)</pre></div>
 <div class="os os-win"><div class="term ps"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">notepad participants/{{USERNAME}}.json</code></pre></div>
 <p>Notepad opens the file. Edit it, then <kbd>Ctrl</kbd>+<kbd>S</kbd> and close it.</p>
 </div>
-<p>Change the three values to <strong>your own nickname, an emoji, and a short fun fact</strong>. Keep the quotes, commas and curly braces exactly where they are:</p>
+<p>Change the three values to <strong>your own name, an emoji, and a short fun fact</strong>. Keep the quotes, commas and curly braces exactly where they are:</p>
 <div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">participants/alex-123.json</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd plain">{
   "name": "Alex",
   "emoji": "🚀",
   "fact": "I love building robots!"
-}</code></pre></div><p><strong>Rules:</strong> name ≤ 30 characters · exactly one emoji works best · fact ≤ 140 characters · no &lt; or &gt; characters · <strong>nicknames, not personal info</strong> (this will be public!). Save the file when done.</p><div class="callout tip"><span class="callout-title"><i class="ic" data-icon="bulb"></i> Emoji shortcut</span><p><strong>macOS</strong>: <kbd>Ctrl</kbd>+<kbd>⌘</kbd>+<kbd>Space</kbd> · <strong>Windows</strong>: <kbd>Win</kbd>+<kbd>.</kbd> · <strong>Linux</strong>: copy one from <a href="https://emojipedia.org" target="_blank" rel="noopener">emojipedia.org</a>. Terminal editors can be fussy with emoji; if so, use VS Code.</p>
+}</code></pre></div><p><strong>Rules:</strong> name ≤ 30 characters · exactly one emoji works best · fact ≤ 140 characters · no &lt; or &gt; characters · Save the file when done.</p><div class="callout tip"><span class="callout-title"><i class="ic" data-icon="bulb"></i> Emoji shortcut</span><p><strong>macOS</strong>: <kbd>Ctrl</kbd>+<kbd>⌘</kbd>+<kbd>Space</kbd> · <strong>Windows</strong>: <kbd>Win</kbd>+<kbd>.</kbd> · <strong>Linux</strong>: copy one from <a href="https://emojipedia.org" target="_blank" rel="noopener">emojipedia.org</a>. Terminal editors can be fussy with emoji; if so, use VS Code.</p>
 </div>
 </li>
 <li><strong>Ask Git what it sees:</strong><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git status</code></pre></div>
@@ -353,7 +351,7 @@ Changes to be committed:
 </li>
 <li><strong>Look at your history:</strong><div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Terminal</span><button class="copy-btn" type="button">Copy</button></div><pre><code class="cmd">git log -1</code></pre></div>
 <div class="term out"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="term-title">Example output</span></div><pre>commit 3f2a9c1d8e7b6a5f4c3b2a1908d7e6f5a4b3c2d1 (HEAD -&gt; add-my-profile)
-Author: Alex &lt;12345678+alex-123@users.noreply.github.com&gt;
+Author: Alex &lt;alex@example.com&gt;
 Date:   Tue Nov 3 10:42:17 2026 +0800
 
     Add my profile</pre></div>
@@ -544,7 +542,6 @@ branch 'add-my-profile' set up to track 'origin/add-my-profile'.</pre></div>
       <a href="materials/git-cheatsheet.html">Printable cheat sheet</a> ·
       <a href="materials/qr.html">QR code</a>
     </div>
-    <div style="color:#b9b4d8">Everything you submit is public. Use a nickname, not personal info.</div>
   </div>
 </footer>
 <script src="js/config.js?v=dev"></script>
